@@ -33,13 +33,15 @@ nav:
   - Início: index.md
   - Plano de Aula:
     - Visão Geral: plano-de-aula/index.md
-    - Avaliação: plano-de-aula/avaliacao.md
-    - Cronograma: plano-de-aula/cronograma.md
     - Aulas Práticas:
       - Aula 01 — 09/03/2026: plano-de-aula/aulas/aula-01-2026-03-09.md
       - Aula 02 — 16/03/2026: plano-de-aula/aulas/aula-02-2026-03-16.md
-      - Template PRD: plano-de-aula/aulas/prd-template.md
-      - Template Geral de Aula: plano-de-aula/aulas/template.md
+  - Avaliação: avaliacao/avaliacao.md
+  - Cronograma: cronograma/cronograma.md
+  - Templates:
+      - Template PRD: templates/prd-template.md
+      - Template Geral de Aula: templates/template.md
+
 markdown_extensions:
   - admonition
   - tables

@@ -25,4 +25,4 @@ Nossos encontros são divididos em três momentos:
 ---
 
 !!! tip "Dica para o Aluno"
-    Acesse o **[Cronograma Completo](cronograma.md)** para não perder nenhum prazo ou tema importante.
+    Acesse o **[Cronograma Completo](../cronograma/cronograma.md)** para não perder nenhum prazo ou tema importante.

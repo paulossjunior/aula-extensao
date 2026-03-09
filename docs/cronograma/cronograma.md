@@ -11,8 +11,8 @@
 
 | Nº   | Data               | Conteúdo                                      |
 |------|--------------------|-----------------------------------------------|
-| 01   | Seg, 09/03/2026   | [Etapa 1 — Identificação do Problema e Mapeamento de Mercado](aulas/aula-01-2026-03-09.md) |
-| 02   | Seg, 16/03/2026   | [Etapa 2 — Prototipação Rápida com IA e Validação de Requisitos](aulas/aula-02-2026-03-16.md) |
+| 01   | Seg, 09/03/2026   | [Etapa 1 — Identificação do Problema e Mapeamento de Mercado](../plano-de-aula/aulas/aula-01-2026-03-09.md) |
+| 02   | Seg, 16/03/2026   | [Etapa 2 — Prototipação Rápida com IA e Validação de Requisitos](../plano-de-aula/aulas/aula-02-2026-03-16.md) |
 | 03   | Seg, 23/03/2026   | — *(a definir)* —                             |
 | 04   | Seg, 30/03/2026   | — *(a definir)* —                             |
 | 05   | Seg, 06/04/2026   | — *(a definir)* —                             |

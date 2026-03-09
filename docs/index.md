@@ -10,7 +10,7 @@
 Se você é aluno ou interessado no curso, recomendamos seguir esta ordem:
 
 1.  **[Visão Geral do Curso](plano-de-aula/index.md)**: Entenda a metodologia e o que vamos aprender.
-2.  **[Cronograma](plano-de-aula/cronograma.md)**: Confira as datas, horários e locais dos nossos encontros.
+2.  **[Cronograma](cronograma/cronograma.md)**: Confira as datas, horários e locais dos nossos encontros.
 3.  **[Aulas Práticas](plano-de-aula/aulas/aula-01-2026-03-09.md)**: Acesse o conteúdo detalhado de cada dia.
 
 ---
@@ -19,7 +19,7 @@ Se você é aluno ou interessado no curso, recomendamos seguir esta ordem:
 
 Para as atividades práticas, utilize nossos templates oficiais:
 
-- [📄 Template de PRD](plano-de-aula/aulas/prd-template.md) — Para documentar suas descobertas de mercado.
+- [📄 Template de PRD](templates/prd-template.md) — Para documentar suas descobertas de mercado.
 - [📝 Guia de Hipótese](plano-de-aula/aulas/aula-01-2026-03-09.md#dica-de-ouro-como-formular-uma-hipotese) — Como estruturar suas validações.
 
 ---
