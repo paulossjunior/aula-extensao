@@ -9,7 +9,7 @@ A avaliação deste curso de extensão tem foco prático e está voltada para a 
 Os exercícios individuais consistem na criação e execução de **palestras para a comunidade**.
 
 - **A Dinâmica:** O aluno deve selecionar um tema do seu domínio de estudo, planejar um mini-curso/palestra e oferecê-lo à comunidade.
-- **Formato:** As aulas podem ser ministradas **Online** ou **Presencialmente** (aos sábados, no campus).
+- **Formato:** As aulas podem ser ministradas **Online** ou **Presencialmente** (aos sábados, no campus). Caso a aula seja **online**, ela deverá ser **gravada e disponibilizada** para que outras pessoas da comunidade possam utilizá-la posteriormente.
 - **Obrigatório:** O aluno/organizador deverá emitir e gerar certificado para os participantes.
 
 ---
@@ -27,7 +27,7 @@ O grande entregável do curso é a criação de um **produto real em produção*
 Os produtos desenvolvidos devem atender **obrigatoriamente** a um dos seguintes temas/projetos:
 
 1. **Pescadores de Manguinhos:** Soluções tecnológicas, de processos ou organizacionais para a comunidade de pescadores.
-2. **Sof — Educação Financeira:** Produtos de apoio ao projeto de finanças liderado pelo Professor Manoel.
+2. **Sof — Educação Financeira:** Produtos de apoio ao projeto de finanças liderado pelo Professor Emmanoel.
 3. **Problema do Campus Escalonável:** Identificação de um problema vivido no campus que possua potencial de ser estendido para resolver dores da comunidade externa.
 
 !!! tip "Critério de Sucesso"
