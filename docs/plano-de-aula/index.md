@@ -1,6 +1,7 @@
 # Plano de Aula e Metodologia
 
-Este curso foi desenhado para capacitar os alunos na criação de produtos e serviços focados em **problemas reais**, utilizando abordagens modernas de gestão e design.
+Bem-vindo ao centro do nosso curso. O objetivo principal desta formação é **prover um desenvolvimento de software de produto baseado em hipótese, suportado por IA**.
+Aqui você encontra as diretrizes, a estrutura de cada encontro e a metodologia que utilizaremos ao longo dos meses.
 
 ---
 

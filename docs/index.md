@@ -1,7 +1,7 @@
 # Curso de Extensão: Desenvolvimento de Produto Baseado em Hipótese
 
 !!! abstract "Bem-vindo!"
-    Este portal contém toda a documentação, cronograma e materiais práticos do nosso curso de extensão. Aqui, transformamos ideias em produtos validados através da metodologia Lean Startup.
+    Aprenda a construir software de forma inteligente.<br>Nosso objetivo é **prover um desenvolvimento de software de produto baseado em hipótese, suportado por Inteligência Artificial**. 🚀
 
 ---
 

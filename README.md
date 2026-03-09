@@ -6,7 +6,7 @@ Repositório principal de material, cronograma e estruturação do curso de exte
 
 ## 📖 Sobre o Curso
 
-O objetivo deste curso é guiar os alunos desde a identificação de um problema real até a prototipação e validação de um produto (MVP) utilizando Inteligência Artificial e metodologias ágeis como o *Build-Measure-Learn*. 
+O objetivo deste curso é **prover um desenvolvimento de software de produto baseado em hipótese, suportado por Inteligência Artificial.** Iremos guiar os alunos desde a identificação de um problema real até a prototipação e validação de um produto (MVP) utilizando metodologias ágeis como o *Build-Measure-Learn*. 
 
 ## 🏗 Estrutura do Repositório
 
