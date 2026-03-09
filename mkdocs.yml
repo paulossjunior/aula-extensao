@@ -38,9 +38,9 @@ nav:
       - Aula 02 — 16/03/2026: plano-de-aula/aulas/aula-02-2026-03-16.md
   - Avaliação: avaliacao/avaliacao.md
   - Cronograma: cronograma/cronograma.md
-  - Templates:
-      - Template PRD: templates/prd-template.md
-      - Template Geral de Aula: templates/template.md
+  - Modelos:
+      - Template PRD: modelos/prd-template.md
+      - Template Geral de Aula: modelos/template.md
 
 markdown_extensions:
   - admonition

@@ -19,7 +19,7 @@ Se você é aluno ou interessado no curso, recomendamos seguir esta ordem:
 
 Para as atividades práticas, utilize nossos templates oficiais:
 
-- [📄 Template de PRD](templates/prd-template.md) — Para documentar suas descobertas de mercado.
+- [📄 Template de PRD](modelos/prd-template.md) — Para documentar suas descobertas de mercado.
 - [📝 Guia de Hipótese](plano-de-aula/aulas/aula-01-2026-03-09.md#dica-de-ouro-como-formular-uma-hipotese) — Como estruturar suas validações.
 
 ---
