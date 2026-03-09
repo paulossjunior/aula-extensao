@@ -1,0 +1,48 @@
+site_name: Curso de Extensão — Desenvolvimento de Produto
+site_description: Documentação oficial do curso de extensão focado em Lean Startup e Hipótese.
+site_author: Paulo Junior
+docs_dir: docs
+theme:
+  name: material
+  language: pt
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - toc.integrate
+plugins:
+  - search:
+      lang: pt
+nav:
+  - Início: index.md
+  - Plano de Aula:
+    - Visão Geral: plano-de-aula/index.md
+    - Cronograma: plano-de-aula/cronograma.md
+    - Aulas Práticas:
+      - Aula 01 — 09/03/2026: plano-de-aula/aulas/aula-01-2026-03-09.md
+      - Aula 02 — 16/03/2026: plano-de-aula/aulas/aula-02-2026-03-16.md
+      - Template PRD: plano-de-aula/aulas/prd-template.md
+      - Template Geral de Aula: plano-de-aula/aulas/template.md
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
