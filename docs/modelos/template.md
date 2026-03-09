@@ -2,6 +2,8 @@
 
 **Data:** DD/MM/AAAA | **Horário:** 11h00 | **Local:** Sala 207
 
+[⬇️ Baixar / Copiar Código Fonte do Template](https://raw.githubusercontent.com/paulossjunior/aula-extensao/main/docs/modelos/template.md)
+
 ---
 
 ## Introdução
