@@ -50,6 +50,7 @@ nav:
       - Exemplo de Planejamento Scrum: modelos/scrum-planejamento-exemplo.md
       - Template de DSM: modelos/dsm-template.md
       - Exemplo de DSM: modelos/dsm-exemplo.md
+      - Exemplo de DSM com Loop: modelos/dsm-exemplo-loop-erro.md
 
 markdown_extensions:
   - admonition

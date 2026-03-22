@@ -29,6 +29,7 @@ Para as atividades práticas, utilize nossos templates oficiais:
 - [✅ Exemplo de Planejamento Scrum](modelos/scrum-planejamento-exemplo.md) — Exemplo preenchido com contexto de produto.
 - [🕸️ Template de DSM](modelos/dsm-template.md) — Para mapear dependências entre módulos, funcionalidades e componentes.
 - [🔀 Exemplo de DSM](modelos/dsm-exemplo.md) — Exemplo preenchido com grafo Mermaid e bifurcação de tasks.
+- [⚠️ Exemplo de DSM com Loop](modelos/dsm-exemplo-loop-erro.md) — Exemplo com dependência circular para identificar erro de planejamento.
 - [📘 Template Geral de Aula](modelos/template.md) — Modelo base para estruturar novas aulas.
 
 ---
