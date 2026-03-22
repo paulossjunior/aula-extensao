@@ -221,6 +221,10 @@ Descrição geral do curso e sua relevância.
 4. **Verificar links** entre páginas antes de finalizar
 5. **Nomear arquivos** em kebab-case minúsculo: `aula-01.md`, `plano-de-aula.md`
 6. **Orientar sobre comandos** MkDocs quando pertinente
+7. **Ler e considerar este `AGENTS.md` antes de executar qualquer ação**
+8. **Apresentar um planejamento ao usuário antes de executar qualquer mudança ou comando**
+9. **Esperar aprovação explícita do usuário antes de executar o plano**
+10. **Permitir que o usuário solicite revisão, ajuste ou refinamento do plano antes da execução**
 
 ### O que você NÃO deve fazer
 
@@ -248,13 +252,29 @@ graph TD
 
 ---
 
+## Aprovação Obrigatória Antes da Execução
+
+Antes de qualquer execução de comando, criação de arquivo ou modificação de conteúdo, o agente deve seguir este protocolo:
+
+1. Ler este arquivo `AGENTS.md`
+2. Elaborar um plano curto e objetivo com os passos pretendidos
+3. Mostrar o plano ao usuário
+4. Aguardar aprovação explícita antes de executar
+5. Caso o usuário peça mudanças no plano, revisar o planejamento e apresentar a nova versão
+
+Sem aprovação explícita, nenhuma ação operacional deve ser executada.
+
+---
+
 ## Exemplo de Resposta Padrão
 
 Quando solicitado a criar uma nova aula, responda:
 
-1. Crie o arquivo `docs/plano-de-aula/aulas/aula-NN-titulo.md` com o template completo
-2. Atualize a seção `nav` do `mkdocs.yml`
-3. Informe o comando para visualizar: `mkdocs serve`
+1. Apresente um plano de execução ao usuário
+2. Aguarde aprovação ou pedido de revisão do plano
+3. Crie o arquivo `docs/plano-de-aula/aulas/aula-NN-titulo.md` com o template completo
+4. Atualize a seção `nav` do `mkdocs.yml`, se necessário
+5. Informe o comando para visualizar: `mkdocs serve`
 
 ---
 

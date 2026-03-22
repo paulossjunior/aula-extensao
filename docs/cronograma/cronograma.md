@@ -13,9 +13,9 @@
 |------|--------------------|-----------------------------------------------|
 | 01   | Seg, 09/03/2026   | [Etapa 1 — Identificação do Problema e Mapeamento de Mercado](../plano-de-aula/aulas/aula-01-2026-03-09.md) |
 | 02   | Seg, 16/03/2026   | [Etapa 2 — Prototipação Rápida com IA e Validação de Requisitos](../plano-de-aula/aulas/aula-02-2026-03-16.md) |
-| 03   | Seg, 23/03/2026   | — *(a definir)* —                             |
-| 04   | Seg, 30/03/2026   | Apresentação do Trabalho (Fechamento Mensal)  |
-| 05   | Seg, 06/04/2026   | — *(a definir)* —                             |
+| 03   | Seg, 23/03/2026   | [Aula 03 — Imersão em Campo e Identificação de Problemas em Manguinhos](../plano-de-aula/aulas/aula-03-2026-03-23.md) |
+| 04   | Seg, 30/03/2026   | [Aula 04 — Validação da Proposta de Produto e Preparação para Reunião com o Cliente](../plano-de-aula/aulas/aula-04-2026-03-30.md) |
+| 05   | Seg, 06/04/2026   | [Aula 05 — Desenvolvimento Ágil, Arquitetura Inicial e Planejamento com DSM](../plano-de-aula/aulas/aula-05-2026-04-06.md) |
 | 06   | Seg, 13/04/2026   | — *(a definir)* —                             |
 | 07   | Seg, 20/04/2026   | — *(a definir)* —                             |
 | 08   | Seg, 27/04/2026   | Apresentação do Trabalho (Fechamento Mensal)  |
