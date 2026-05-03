@@ -19,7 +19,7 @@
 | 06   | Seg, 13/04/2026   | — *(a definir)* —                             |
 | 07   | Seg, 20/04/2026   | — *(a definir)* —                             |
 | 08   | Seg, 27/04/2026   | Apresentação do Trabalho (Fechamento Mensal)  |
-| 09   | Seg, 04/05/2026   | — *(a definir)* —                             |
+| 09   | Seg, 04/05/2026   | [Aula 09 — Desenvolvimento Orientado a Especificação (Spec-Driven Development)](../plano-de-aula/aulas/aula-09-2026-05-04.md) |
 | 10   | Seg, 11/05/2026   | — *(a definir)* —                             |
 | 11   | Seg, 18/05/2026   | — *(a definir)* —                             |
 | 12   | Seg, 25/05/2026   | Apresentação do Trabalho (Fechamento Mensal)  |

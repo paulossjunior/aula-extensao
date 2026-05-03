@@ -22,6 +22,7 @@ Use estes materiais para visualizar como os templates podem ser preenchidos em u
 - [Exemplo de Planejamento Scrum](../modelos/scrum-planejamento-exemplo.md) — Exemplo com backlog, sprints e distribuição de tarefas.
 - [Exemplo de DSM](../modelos/dsm-exemplo.md) — Exemplo com matriz de dependências e grafo Mermaid.
 - [Exemplo de DSM com Loop](../modelos/dsm-exemplo-loop-erro.md) — Exemplo didático mostrando dependência circular e erro de planejamento.
+- [Exemplo de SDD com Spec-Kit (TODO List React + C#)](../modelos/sdd-exemplo-todo-react-csharp.md) — Walk-through em arquitetura apartada (dois repositórios, front e back como serviços) com constitutions, specs, plans, tasks e código.
 
 ---
 
