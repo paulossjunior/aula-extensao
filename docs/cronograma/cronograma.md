@@ -20,8 +20,8 @@
 | 07   | Seg, 20/04/2026   | — *(a definir)* —                             |
 | 08   | Seg, 27/04/2026   | Apresentação do Trabalho (Fechamento Mensal)  |
 | 09   | Seg, 04/05/2026   | [Aula 09 — Desenvolvimento Orientado a Especificação (Spec-Driven Development)](../plano-de-aula/aulas/aula-09-2026-05-04.md) |
-| 10   | Seg, 11/05/2026   | [Aula 10 — Comunicação Enxuta com Agentes de IA: Caveman e Economia de Tokens](../plano-de-aula/aulas/aula-10-2026-05-11.md) |
-| 11   | Seg, 18/05/2026   | — *(a definir)* —                             |
+| 10   | Seg, 11/05/2026   | [Aula 10 — Caveman + Spec-Kit: Comunicação Enxuta no Desenvolvimento com IA](../plano-de-aula/aulas/aula-10-2026-05-11.md) |
+| 11   | Seg, 18/05/2026   | [Aula 11 — Epics como Fonte de Desenvolvimento com Spec-Kit](../plano-de-aula/aulas/aula-11-2026-05-18.md) |
 | 12   | Seg, 25/05/2026   | Apresentação do Trabalho (Fechamento Mensal)  |
 | 13   | Seg, 01/06/2026   | — *(a definir)* —                             |
 | 14   | Seg, 08/06/2026   | — *(a definir)* —                             |
