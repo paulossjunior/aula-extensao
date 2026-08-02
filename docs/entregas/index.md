@@ -89,73 +89,95 @@ Sempre que a entrega **contiver código**, ela precisa das três peças abaixo. 
 
 ## Detalhamento por aula
 
-### `aula-01-processo-de-software` — vence 10/08
+### Aula 01 — Mapear o ciclo e publicar o portal do grupo
+
+**Pasta:** `aula-01-processo-de-software` &nbsp;·&nbsp; **Vence:** Seg, 10/08
 
 - Ciclo de um produto real preenchido, com o palpite sobre monitoramento justificado
 - URL do portal MkDocs do grupo, publicado e acessível
 - Os quatro riscos do projeto, um por fase do ciclo
 
-### `aula-02-problema-e-mercado` — vence 17/08
+### Aula 02 — Identificar o problema e mapear o mercado
+
+**Pasta:** `aula-02-problema-e-mercado` &nbsp;·&nbsp; **Vence:** Seg, 17/08
 
 - Parágrafo descrevendo o problema observado
 - Tabela de soluções existentes, concorrentes e indicadores de sucesso, com justificativa
 - PRD iniciado no portal do grupo
 
-### `aula-03-prototipacao` — vence 24/08
+### Aula 03 — Transformar requisitos em protótipo com IA
+
+**Pasta:** `aula-03-prototipacao` &nbsp;·&nbsp; **Vence:** Seg, 24/08
 
 - Requisitos macro do produto e o texto do prompt estruturado
 - Link do Figma com as telas geradas, inserido em página do MkDocs
 - Parágrafo com o principal aprendizado da validação de corredor
 
-### `aula-04-clientes` — vence 31/08
+### Aula 04 — Definir o segmento-alvo e o early adopter
+
+**Pasta:** `aula-04-clientes` &nbsp;·&nbsp; **Vence:** Seg, 31/08
 
 - Mapa de atores com o usuário principal destacado
 - Segmento-alvo escolhido, com justificativa
 - Perfil do early adopter
 - Seção 2 do PRD (Público-alvo) preenchida
 
-### `aula-06-validacao-proposta` — vence 21/09
+### Aula 06 — Validar a proposta e preparar a reunião com o cliente
+
+**Pasta:** `aula-06-validacao-proposta` &nbsp;·&nbsp; **Vence:** Seg, 21/09
 
 - Resumo estruturado da proposta
 - Protótipo inicial
 - Lista de ajustes apontados pelo professor
 - Roteiro da reunião de validação com o cliente
 
-### `aula-07-scrum-e-dsm` — vence 28/09
+### Aula 07 — Montar backlog, features fim a fim e DSM
+
+**Pasta:** `aula-07-scrum-e-dsm` &nbsp;·&nbsp; **Vence:** Seg, 28/09
 
 - Backlog inicial com prioridades
 - Lista de features fim a fim priorizadas
 - DSM com comentários sobre dependências e ordem de implementação
 - Plano inicial de arquitetura e roadmap curto
 
-### `aula-09-spec-driven-development` — vence 19/10
+### Aula 09 — Rodar o fluxo do Spec-Kit numa feature real
+
+**Pasta:** `aula-09-spec-driven-development` &nbsp;·&nbsp; **Vence:** Seg, 19/10
 
 - Repositório com o Spec-Kit inicializado
 - `.specify/memory/constitution.md` com os princípios reais do grupo
 - `specs/[FEATURE]/spec.md` revisado
 - `plan.md` e `tasks.md`, mais reflexão comparando a ordem proposta pelo agente com a DSM
 
-### `aula-10-agents-md-e-skills` — vence 26/10
+### Aula 10 — Dar contexto ao agente com AGENTS.md e skills
+
+**Pasta:** `aula-10-agents-md-e-skills` &nbsp;·&nbsp; **Vence:** Seg, 26/10
 
 - `AGENTS.md` commitado, mais o relato do que o agente errou na primeira tentativa
 - Constitution e `AGENTS.md` sem sobreposição, com a lista do que foi movido
 - `skills-lock.json` e a skill própria versionada
 
-### `aula-12-caveman` — vence 16/11
+### Aula 12 — Revisar os artefatos do Spec-Kit com Caveman
+
+**Pasta:** `aula-12-caveman` &nbsp;·&nbsp; **Vence:** Seg, 16/11
 
 - Artefato do Spec-Kit anotado, com no mínimo cinco marcações de corte ou preservação
 - Três versões da mesma resposta, com contagem de palavras
 - Duas revisões reais do fluxo, com decisão do grupo
 - Tabela de informação preservada × perdida
 
-### `aula-13-epics-e-gherkin` — vence 23/11
+### Aula 13 — Transformar épicos e Gherkin em spec
+
+**Pasta:** `aula-13-epics-e-gherkin` &nbsp;·&nbsp; **Vence:** Seg, 23/11
 
 - `docs/epics.md` versionado
 - Arquivo de rule criado
 - Comando `/epic-to-spec` salvo
 - `spec.md`, `plan.md`, `tasks.md` gerados, com nota sobre divergências entre agente, épico e DSM
 
-### `aula-14-langchain` — opcional, até 07/12
+### Aula 14 — Comparar CrewAI e LangChain *(opcional)*
+
+**Pasta:** `aula-14-langchain` &nbsp;·&nbsp; **Vence:** Seg, 07/12 &nbsp;·&nbsp; **Opcional**
 
 Desafio da Aula 14: refazer a crew em LangChain, com a tabela comparativa preenchida e a recomendação escrita.
 
