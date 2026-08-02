@@ -6,6 +6,8 @@ repo_url: https://github.com/paulossjunior/aula-extensao
 repo_name: paulossjunior/aula-extensao
 edit_uri: edit/main/docs/
 docs_dir: docs
+validation:
+  anchors: warn
 theme:
   name: material
   language: pt
@@ -53,6 +55,7 @@ nav:
       - Aula 14 — 23/11/2026: plano-de-aula/aulas/aula-14-2026-11-23.md
       - Aula 16 — 07/12/2026: plano-de-aula/aulas/aula-16-2026-12-07.md
   - Avaliação: avaliacao/avaliacao.md
+  - Entregas: entregas/index.md
   - Cronograma: cronograma/cronograma.md
   - Materiais de Apoio: materiais/index.md
   - Modelos:

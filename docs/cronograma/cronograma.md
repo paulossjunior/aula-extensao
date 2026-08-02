@@ -11,7 +11,7 @@
 !!! abstract "Como funciona a semana"
     - **Segunda (presencial):** conteúdo novo, discovery, hands-on e feedback com o professor.
     - **Terça (a distância):** os alunos usam o horário para **exercícios e trabalhos** aplicando o conteúdo da segunda. Não há aula expositiva.
-    - **Prazo dos exercícios:** o que é proposto na terça vence **na aula da segunda-feira seguinte**. Caindo em feriado, passa para a próxima aula. Calendário em [Avaliação](../avaliacao/avaliacao.md#prazos-de-envio).
+    - **Prazo dos exercícios:** o que é proposto na terça vence **na aula da segunda-feira seguinte**. Caindo em feriado, passa para a próxima aula. Calendário completo em [Especificação de Entregas](../entregas/index.md#calendario-de-entregas-exercicios-individuais).
 
 !!! note "Apresentação mensal do trabalho"
     **Toda última segunda-feira do mês** é reservada para a **apresentação do trabalho** pelos grupos, sem conteúdo novo. No semestre, caem em:
@@ -72,10 +72,10 @@
 | EaD 18 | Ter, 08/12/2026 | 13h50–16h30 | 💻 EaD | ⏰ **Último dia para entrega de tudo que ainda não foi entregue** |
 | **Prova** | Seg, 14/12/2026 | 11h20–13h00 | Lab 207 | 📝 **Prova Final** — trabalho individual cobrindo todo o conteúdo da disciplina |
 
-!!! note "Checkpoints práticos — avaliação individual"
+!!! note "Entrevista nos checkpoints práticos — avaliação individual"
     Nas segundas de **31/08**, **28/09**, **26/10** e **30/11**, em paralelo às apresentações, cada aluno passa por um **checkpoint prático individual** de 30 a 40 minutos no Lab 207: resolve uma tarefa pequena sobre o repositório dele ou do grupo, com IA liberada.
 
-    A média dos quatro é o **multiplicador de 0 a 1** aplicado sobre toda a nota do semestre. Critérios em [Avaliação](../avaliacao/avaliacao.md#3-checkpoints-praticos-multiplicador-de-0-a-1).
+    Cada checkpoint resulta em passou ou não passou, e **é preciso passar nos quatro**. Falhar em um zera os **50 pontos do trabalho em grupo** daquele aluno. Critérios em [Avaliação](../avaliacao/avaliacao.md#3-entrevista-nos-checkpoints-praticos).
 
 !!! danger "Fechamento do semestre"
     - **Dezembro é mês de acerto.** Não há conteúdo cobrado nem exercício novo. A Aula 16, em 07/12, é o encerramento, com uma **aula extra sobre Hermes Agent sem entrega obrigatória**: o mês é reservado para os alunos regularizarem o trabalho e os exercícios pendentes. A última sessão que propõe exercício é **ter, 24/11**, com vencimento em **seg, 07/12**.
