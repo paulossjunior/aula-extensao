@@ -7,6 +7,7 @@ A avaliação deste curso de extensão tem foco prático e está voltada para a 
 | Atividades individuais — código próprio | 25 pontos | Individual |
 | Atividades individuais — mini-curso no YouTube | 25 pontos | Individual |
 | Trabalho em grupo — produto em produção | 50 pontos | Coletiva |
+| Observabilidade do produto — **opcional** | +10 pontos | Coletiva |
 | **Checkpoints práticos** | **multiplicador de 0 a 1** | Individual |
 
 !!! danger "Os checkpoints multiplicam tudo"
@@ -137,7 +138,7 @@ Não é prova escrita nem entrevista: o aluno senta na máquina e **mexe no cód
 | **CP1** | Seg, 31/08/2026 | Discovery — Aulas 01 a 04 | Justificar o segmento-alvo a partir das evidências do PRD; reescrever uma hipótese mal formulada do próprio documento; apontar quem é o pagador no mapa de atores e por quê |
 | **CP2** | Seg, 28/09/2026 | Definição e planejamento — Aulas 06 e 07 | Encaixar uma feature nova na DSM e dizer o que ela destrava; quebrar uma feature em stories; justificar a ordem de implementação escolhida |
 | **CP3** | Seg, 26/10/2026 | Especificação e contexto do agente — Aulas 09 e 10 | Adicionar um campo ponta a ponta no produto; corrigir um bug plantado pelo professor; escrever a spec de uma mudança pequena e rodar o fluxo do Spec-Kit |
-| **CP4** | Seg, 30/11/2026 | Comunicação enxuta, épicos, agentes e observabilidade — Aulas 12 a 14 | Escrever o cenário Gherkin de uma regra que já existe no código; derivar uma spec a partir de um épico do grupo; mostrar como o grupo detecta que o produto caiu e qual é o MTTD medido |
+| **CP4** | Seg, 30/11/2026 | Comunicação enxuta, épicos e agentes — Aulas 12 a 14 | Escrever o cenário Gherkin de uma regra que já existe no código; derivar uma spec a partir de um épico do grupo; justificar por que o trabalho foi ou não dividido entre agentes |
 
 Os checkpoints acontecem nas segundas de **apresentação do trabalho**, em paralelo às apresentações dos demais grupos — não consomem aula de conteúdo.
 
@@ -164,33 +165,58 @@ Os checkpoints acontecem nas segundas de **apresentação do trabalho**, em para
 
 ---
 
+## 🎁 Pontos Extras — Observabilidade (até 10 pontos)
+
+**Opcional.** O grupo que colocar o próprio produto sob observação ganha até **10 pontos extras**.
+
+Estar em produção não é só ter feito o deploy: é o grupo **saber** que o produto está de pé. Três peças, cumulativas:
+
+| Peça | Pontos | O que é |
+|------|--------|---------|
+| **Health check** | 3 | Uma rota que responde 200 quando o sistema está sadio, tocando as dependências críticas — banco, fila, serviço externo |
+| **Log de erro estruturado** | 3 | Uma linha por evento, com nível, momento e contexto suficiente para diagnosticar sem reproduzir |
+| **Verificação externa agendada** | 4 | Algo que consulte o health check periodicamente e **avise o grupo num canal** quando falhar |
+
+A ferramenta é escolha do grupo: cron, GitHub Action agendada, serviço de *uptime* gratuito ou um agente. O que não vale é depender de alguém lembrar de olhar.
+
+!!! tip "O que comprova a entrega"
+    O grupo informa o **MTTD** medido do próprio produto — o tempo entre uma falha provocada de propósito e o alerta chegar. É o número que separa "achamos que está no ar" de "sabemos que está no ar".
+
+!!! note "Por que vale a pena mesmo sendo opcional"
+    Os 50 pontos do produto exigem que ele esteja **em produção e sendo usado**. Se o sistema cai na sexta e o grupo descobre na apresentação de segunda, foram três dias sem produto no ar. A observabilidade não é só bônus: é o que protege a nota principal.
+
+    Conteúdo na [Aula 14](../plano-de-aula/aulas/aula-14-2026-11-23.md), em formato expositivo.
+
 ## 🧮 Cálculo da Nota
 
 ```text
-NF = (COD + CUR + PRD) x CP
+NF = min(100, (COD + CUR + PRD + EXT) x CP)
 
 NF  = Nota Final                (0 a 100)
 COD = Código próprio            (0 a 25)    — repositório individual do aluno
 CUR = Mini-curso no YouTube     (0 a 25)    — vídeo individual explicando o próprio código
 PRD = Produto do grupo          (0 a 50)    — produto em produção + portal de documentação
+EXT = Observabilidade           (0 a 10)    — opcional, pontos extras do grupo
 CP  = Checkpoints Práticos      (0,0 a 1,0) — média dos quatro, multiplicador individual
 
 CP = (CP1 + CP2 + CP3 + CP4) / 4
 ```
 
-Nota máxima: `(25 + 25 + 50) × 1,0 = 100`.
+Nota máxima: **100**. Os pontos extras entram na soma antes do multiplicador e servem para **compensar perdas em outras frentes** — não ultrapassam o teto.
 
 ### Exemplos
 
-| Situação | COD | CUR | PRD | CP | Nota final |
-|----------|-----|-----|-----|----|------------|
-| Entregou tudo e foi bem nos quatro checkpoints | 25 | 25 | 50 | 1,0 | **100** |
-| Entregou tudo, um checkpoint fraco (1,0 · 0,4 · 1,0 · 1,0) | 25 | 25 | 50 | 0,85 | **85** |
-| Grupo entregou, mas o aluno não sustentou nenhum checkpoint | 25 | 25 | 50 | 0,0 | **0** |
-| Sem código individual, resto completo | 0 | 25 | 50 | 1,0 | **75** |
-| Sem mini-curso, resto completo | 25 | 0 | 50 | 1,0 | **75** |
-| Produto do grupo não chegou à produção | 25 | 25 | 0 | 1,0 | **50** |
-| Faltou ao CP2 sem justificativa (1,0 · 0,0 · 1,0 · 1,0) | 25 | 25 | 50 | 0,75 | **75** |
+| Situação | COD | CUR | PRD | EXT | CP | Nota final |
+|----------|-----|-----|-----|-----|----|------------|
+| Entregou tudo e foi bem nos quatro checkpoints | 25 | 25 | 50 | 0 | 1,0 | **100** |
+| Entregou tudo, um checkpoint fraco (1,0 · 0,4 · 1,0 · 1,0) | 25 | 25 | 50 | 0 | 0,85 | **85** |
+| Grupo entregou, mas o aluno não sustentou nenhum checkpoint | 25 | 25 | 50 | 0 | 0,0 | **0** |
+| Sem código individual, resto completo | 0 | 25 | 50 | 0 | 1,0 | **75** |
+| Sem mini-curso, resto completo | 25 | 0 | 50 | 0 | 1,0 | **75** |
+| Produto do grupo não chegou à produção | 25 | 25 | 0 | 0 | 1,0 | **50** |
+| Faltou ao CP2 sem justificativa (1,0 · 0,0 · 1,0 · 1,0) | 25 | 25 | 50 | 0 | 0,75 | **75** |
+| Sem mini-curso, mas com observabilidade completa | 25 | 0 | 50 | 10 | 1,0 | **85** |
+| Tudo entregue + observabilidade (teto aplicado) | 25 | 25 | 50 | 10 | 1,0 | **100** |
 
 !!! note "A nota é individual, mesmo com trabalho coletivo"
     `PRD` vem do grupo e é igual para todos os integrantes. Já `COD`, `CUR` e `CP` são individuais — por isso dois alunos do mesmo grupo podem terminar o semestre com notas bem diferentes.
