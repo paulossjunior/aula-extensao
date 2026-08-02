@@ -1,6 +1,10 @@
 site_name: Curso de Extensão — Desenvolvimento de Projetos Suportado por IA
 site_description: Documentação oficial do curso de extensão em desenvolvimento de projetos suportado por Inteligência Artificial.
 site_author: Paulo Junior
+site_url: https://paulossjunior.github.io/aula-extensao/
+repo_url: https://github.com/paulossjunior/aula-extensao
+repo_name: paulossjunior/aula-extensao
+edit_uri: edit/main/docs/
 docs_dir: docs
 theme:
   name: material
@@ -26,6 +30,7 @@ theme:
     - navigation.top
     - search.suggest
     - toc.integrate
+    - content.action.edit
 plugins:
   - search:
       lang: pt
