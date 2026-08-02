@@ -40,7 +40,7 @@ Cada aluno planeja, grava e publica **um mini-curso individual no YouTube**, abe
 - **É individual.** Cada aluno faz o seu, mesmo estando em grupo.
 - **O conteúdo explica o código do próprio aluno.** Não é tema livre: o mini-curso ensina um conteúdo da disciplina mostrando a aplicação que está no repositório individual — o que foi construído, por que aquelas decisões, e como outra pessoa reproduz.
 - **Publicação:** vídeo público no YouTube, com o link registrado no `README.md` do repositório individual e informado ao professor.
-- **Divulgação:** o curso deve ser **anunciado no [LEDS Academy](https://leds.academy)**, a plataforma de cursos do laboratório. É por lá que a comunidade encontra o material.
+- **Divulgação:** o curso é publicado e divulgado **no canal do próprio aluno**. É o canal dele que leva o material à comunidade — e o que continua acessível depois do curso.
 - **Permanência:** por ficar publicado, o material continua servindo à comunidade depois do fim do semestre — é a contrapartida de extensão da atividade individual.
 
 !!! abstract "A relação entre as duas entregas individuais"
@@ -106,15 +106,14 @@ O grupo mantém **um repositório único**, com:
 !!! tip "Os commits identificam quem fez o quê"
     Cada integrante deve commitar sob a própria conta no repositório do grupo. É essa trilha que o professor usa nos checkpoints práticos para propor uma tarefa sobre o código que aquele aluno de fato tocou.
 
-### Mini-curso — YouTube e LEDS Academy
+### Mini-curso — canal do aluno no YouTube
 
-- Vídeo **público** no YouTube, na conta do próprio aluno
-- Curso **anunciado no [LEDS Academy](https://leds.academy)**
+- Vídeo **público** no YouTube, **no canal do próprio aluno**
 - **Link no `README.md`** do repositório individual, na raiz
 - Um mini-curso por aluno, mesmo entre integrantes do mesmo grupo
 
-!!! warning "Sem anúncio, não há extensão"
-    O vídeo publicado e não divulgado não alcança a comunidade. O anúncio no LEDS Academy é o que transforma a gravação em ação de extensão — por isso faz parte da entrega, não é opcional.
+!!! warning "Sem divulgação, não há extensão"
+    Vídeo publicado e não divulgado não alcança ninguém. Divulgar o curso no canal e nos espaços em que o público-alvo está faz parte da entrega — não é opcional.
 
 ---
 

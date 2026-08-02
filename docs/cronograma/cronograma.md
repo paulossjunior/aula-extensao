@@ -34,7 +34,7 @@
 |----|------|---------|-------|----------|
 | **Aula 01** | Seg, 03/08/2026 | 11h20–13h00 | Lab 207 | [Visão Geral do Processo de Software](../plano-de-aula/aulas/aula-01-2026-08-03.md) |
 | EaD 01 | Ter, 04/08/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 02** | Seg, 10/08/2026 | 11h20–13h00 | Lab 207 | [Identificação do Problema e Mapeamento de Mercado](../plano-de-aula/aulas/aula-02-2026-08-10.md) |
+| **Aula 02** | Seg, 10/08/2026 | 11h20–13h00 | Lab 207 | [Identificação do Problema, Mercado e Hipótese de Valor](../plano-de-aula/aulas/aula-02-2026-08-10.md) |
 | EaD 02 | Ter, 11/08/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 03** | Seg, 17/08/2026 | 11h20–13h00 | Lab 207 | [Prototipação Rápida com IA e Validação de Requisitos](../plano-de-aula/aulas/aula-03-2026-08-17.md) |
 | EaD 03 | Ter, 18/08/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
@@ -64,11 +64,11 @@
 | EaD 14 | Ter, 10/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 13** | Seg, 16/11/2026 | 11h20–13h00 | Lab 207 | [Epics, User Stories e Gherkin como Fonte do Spec-Kit](../plano-de-aula/aulas/aula-13-2026-11-16.md) |
 | EaD 15 | Ter, 17/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 14** | Seg, 23/11/2026 | 11h20–13h00 | Lab 207 | [CrewAI — Orquestração de Múltiplos Agentes](../plano-de-aula/aulas/aula-14-2026-11-23.md) |
+| **Aula 14** | Seg, 23/11/2026 | 11h20–13h00 | Lab 207 | [CrewAI: Orquestração de Múltiplos Agentes](../plano-de-aula/aulas/aula-14-2026-11-23.md) |
 | EaD 16 | Ter, 24/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 15** | Seg, 30/11/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎯 **Checkpoint Prático 4** (comunicação enxuta, épicos e agentes) |
 | EaD 17 | Ter, 01/12/2026 | 13h50–16h30 | 💻 EaD | 🔧 **Regularização** — acerto do trabalho e dos exercícios pendentes |
-| **Aula 16** | Seg, 07/12/2026 | 11h20–13h00 | Lab 207 | 🏁 **Encerramento** · aula extra: [Hermes Agent](../plano-de-aula/aulas/aula-16-2026-12-07.md) — sem entrega obrigatória |
+| **Aula 16** | Seg, 07/12/2026 | 11h20–13h00 | Lab 207 | 🏁 **Encerramento** · aula extra: [Hermes Agent: Agente de Código no Fluxo de Desenvolvimento](../plano-de-aula/aulas/aula-16-2026-12-07.md) — sem entrega obrigatória |
 | EaD 18 | Ter, 08/12/2026 | 13h50–16h30 | 💻 EaD | ⏰ **Último dia para entrega de tudo que ainda não foi entregue** |
 | **Prova** | Seg, 14/12/2026 | 11h20–13h00 | Lab 207 | 📝 **Prova Final** — trabalho individual cobrindo todo o conteúdo da disciplina |
 
