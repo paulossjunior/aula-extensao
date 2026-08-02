@@ -14,7 +14,7 @@
 | Equipe | Grupo 02 |
 | Domínio analisado | Fluxo inicial de pedidos e acompanhamento |
 | Objetivo da análise | Mostrar como loops no grafo indicam erro de planejamento |
-| Data | 06/04/2026 |
+| Data | 21/09/2026 |
 
 ---
 

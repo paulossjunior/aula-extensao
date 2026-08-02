@@ -1,4 +1,4 @@
-# Curso de Extensão: Desenvolvimento de Produto Baseado em Hipótese
+# Curso de Extensão: Desenvolvimento de Projetos Suportado por IA
 
 Repositório principal de material, cronograma e estruturação do curso de extensão focado em Lean Startup, Design Centrado no Humano e Validação Rápida.
 

@@ -14,7 +14,7 @@
 | Equipe            | Grupo 02 |
 | Product Owner     | Ana |
 | Scrum Master      | Carlos |
-| Data de Início    | 06/04/2026 |
+| Data de Início    | 21/09/2026 |
 | Objetivo Geral    | Criar uma solução digital simples para registrar pedidos de pescado, organizar entregas e melhorar a comunicação entre pescadores e compradores locais. |
 
 ---

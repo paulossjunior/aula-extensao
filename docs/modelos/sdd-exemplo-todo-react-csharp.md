@@ -12,7 +12,7 @@
 |-------|-----------|
 | Nome do Produto | ListaJá |
 | Equipe (fictícia) | Grupo 07 |
-| Data | 04/05/2026 |
+| Data | 05/10/2026 |
 | Domínio | Aplicativo pessoal de lista de tarefas com prazo opcional |
 | Repositório do back | `listaja-api` (ASP.NET Core 8 Web API + EF Core + SQLite) |
 | Repositório do front | `listaja-web` (React 18 + Vite + TypeScript) |

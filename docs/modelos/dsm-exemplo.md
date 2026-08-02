@@ -14,7 +14,7 @@
 | Equipe | Grupo 02 |
 | Domínio analisado | Fluxo inicial de autenticação e operação de pedidos |
 | Objetivo da análise | Identificar dependências e visualizar quais tarefas podem avançar em paralelo |
-| Data | 06/04/2026 |
+| Data | 21/09/2026 |
 
 ---
 

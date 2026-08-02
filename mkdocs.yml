@@ -1,5 +1,5 @@
-site_name: Curso de Extensão — Desenvolvimento de Produto
-site_description: Documentação oficial do curso de extensão focado em Lean Startup e Hipótese.
+site_name: Curso de Extensão — Desenvolvimento de Projetos Suportado por IA
+site_description: Documentação oficial do curso de extensão em desenvolvimento de projetos suportado por Inteligência Artificial.
 site_author: Paulo Junior
 docs_dir: docs
 theme:
@@ -35,14 +35,15 @@ nav:
   - Plano de Aula:
     - Visão Geral: plano-de-aula/index.md
     - Aulas Práticas:
-      - Aula 01 — 09/03/2026: plano-de-aula/aulas/aula-01-2026-03-09.md
-      - Aula 02 — 16/03/2026: plano-de-aula/aulas/aula-02-2026-03-16.md
-      - Aula 03 — 23/03/2026: plano-de-aula/aulas/aula-03-2026-03-23.md
-      - Aula 04 — 30/03/2026: plano-de-aula/aulas/aula-04-2026-03-30.md
-      - Aula 05 — 06/04/2026: plano-de-aula/aulas/aula-05-2026-04-06.md
-      - Aula 09 — 04/05/2026: plano-de-aula/aulas/aula-09-2026-05-04.md
-      - Aula 10 — 11/05/2026: plano-de-aula/aulas/aula-10-2026-05-11.md
-      - Aula 11 — 18/05/2026: plano-de-aula/aulas/aula-11-2026-05-18.md
+      - Aula 01 — 03/08/2026: plano-de-aula/aulas/aula-01-2026-08-03.md
+      - Aula 02 — 10/08/2026: plano-de-aula/aulas/aula-02-2026-08-10.md
+      - Aula 03 — 17/08/2026: plano-de-aula/aulas/aula-03-2026-08-17.md
+      - Aula 04 — 24/08/2026: plano-de-aula/aulas/aula-04-2026-08-24.md
+      - Aula 06 — 14/09/2026: plano-de-aula/aulas/aula-06-2026-09-14.md
+      - Aula 07 — 21/09/2026: plano-de-aula/aulas/aula-07-2026-09-21.md
+      - Aula 09 — 05/10/2026: plano-de-aula/aulas/aula-09-2026-10-05.md
+      - Aula 10 — 19/10/2026: plano-de-aula/aulas/aula-10-2026-10-19.md
+      - Aula 12 — 09/11/2026: plano-de-aula/aulas/aula-12-2026-11-09.md
   - Avaliação: avaliacao/avaliacao.md
   - Cronograma: cronograma/cronograma.md
   - Materiais de Apoio: materiais/index.md

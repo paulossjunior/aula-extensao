@@ -15,13 +15,21 @@ Trabalhamos na intersecção de três pilares fundamentais:
 
 ---
 
-## 📅 Estrutura das Aulas
+## 📅 Estrutura da Semana
 
-Nossos encontros são divididos em três momentos:
+A semana tem dois encontros com papéis distintos:
+
+### Segunda-feira — Aula de conteúdo (presencial, Lab 207)
+
+O encontro presencial é dividido em três momentos:
 
 -   **Discovery**: Introdução ao tema, referências teóricas e análise de mercado.
 -   **Hands-on**: Atividades práticas, dinâmicas em grupo e preenchimento de documentos (como o PRD).
 -   **Feedback**: Apresentações rápidas e trocas entre as equipes para refinamento das ideias.
+
+### Terça-feira — Exercícios e trabalhos (a distância)
+
+Sem conteúdo novo e sem aula expositiva. O horário é reservado para os alunos aplicarem, a distância, o que foi visto na segunda: resolver os exercícios propostos e avançar no trabalho de extensão em grupo.
 
 ---
 

@@ -1,6 +1,6 @@
 # Product Requirements Document (PRD)
 
-> **Instruções:** Preencha este documento durante a Aula 01. Ele será a base para as próximas etapas do processo de desenvolvimento de produto.
+> **Instruções:** Preencha este documento durante a Aula 02. Ele será a base para as próximas etapas do processo de desenvolvimento de produto.
 
 [⬇️ Baixar / Copiar Código Fonte do Template](https://raw.githubusercontent.com/paulossjunior/aula-extensao/main/docs/modelos/prd-template.md)
 

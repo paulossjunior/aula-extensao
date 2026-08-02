@@ -1,4 +1,4 @@
-# Curso de Extensão: Desenvolvimento de Produto Baseado em Hipótese
+# Curso de Extensão: Desenvolvimento de Projetos Suportado por IA
 
 !!! abstract "Bem-vindo!"
     Aprenda a construir software de forma inteligente.<br>Nosso objetivo é **prover um desenvolvimento de software de produto baseado em hipótese, suportado por Inteligência Artificial**. 🚀
@@ -11,7 +11,7 @@ Se você é aluno ou interessado no curso, recomendamos seguir esta ordem:
 
 1.  **[Visão Geral do Curso](plano-de-aula/index.md)**: Entenda a metodologia e o que vamos aprender.
 2.  **[Cronograma](cronograma/cronograma.md)**: Confira as datas, horários e locais dos nossos encontros.
-3.  **[Aulas Práticas](plano-de-aula/aulas/aula-01-2026-03-09.md)**: Acesse o conteúdo detalhado de cada dia.
+3.  **[Aulas Práticas](plano-de-aula/aulas/aula-01-2026-08-03.md)**: Acesse o conteúdo detalhado de cada dia.
 
 ---
 
@@ -21,7 +21,7 @@ Para as atividades práticas, utilize nossos templates oficiais:
 
 - [📚 Materiais de Apoio](materiais/index.md) — Catálogo central com templates, exemplos preenchidos e guias do curso.
 - [📄 Template de PRD](modelos/prd-template.md) — Para documentar suas descobertas de mercado.
-- [📝 Guia de Hipótese](plano-de-aula/aulas/aula-01-2026-03-09.md#como-formular-uma-hipotese) — Como estruturar suas validações.
+- [📝 Guia de Hipótese](plano-de-aula/aulas/aula-02-2026-08-10.md#como-formular-uma-hipotese) — Como estruturar suas validações.
 
 ### Modelos e Exemplos
 
@@ -35,6 +35,7 @@ Para as atividades práticas, utilize nossos templates oficiais:
 ---
 
 !!! info "Informações Rápidas"
-    - **Aulas:** Segundas-feiras, 11h.
-    - **Local:** Sala 207.
+    - **Segundas-feiras:** 11h20 às 13h00 — aula de conteúdo, presencial no Lab 207.
+    - **Terças-feiras:** 13h50 às 16h30 — exercícios e trabalhos, a distância.
+    - **Período:** 29/07/2026 a 11/12/2026.
     - **Professor:** Paulo Junior.

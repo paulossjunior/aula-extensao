@@ -29,8 +29,8 @@ Use estes materiais para visualizar como os templates podem ser preenchidos em u
 
 ## Guias de Apoio
 
-- [Guia de Hipótese](../plano-de-aula/aulas/aula-01-2026-03-09.md#como-formular-uma-hipotese) — Apoio para formular hipóteses de produto e validação.
-- [Aula 05 — Desenvolvimento Ágil, Arquitetura Inicial e Planejamento com DSM](../plano-de-aula/aulas/aula-05-2026-04-06.md) — Aula de referência para Scrum, features fim a fim e DSM.
+- [Guia de Hipótese](../plano-de-aula/aulas/aula-02-2026-08-10.md#como-formular-uma-hipotese) — Apoio para formular hipóteses de produto e validação.
+- [Aula 07 — Desenvolvimento Ágil, Arquitetura Inicial e Planejamento com DSM](../plano-de-aula/aulas/aula-07-2026-09-21.md) — Aula de referência para Scrum, features fim a fim e DSM.
 
 ---
 

@@ -22,7 +22,7 @@ Uma etapa de aprofundamento e defesa. Os alunos passarão por uma entrevista ond
 
 ## 👥 3. Trabalho em Grupo — Produto de Extensão (50 Pontos)
 
-O grande entregável do curso é a criação de um **produto real em produção**, focado em resolver problemas concretos de projetos de extensão. O grupo deve apresentar a solução desenvolvida e seu respectivo portal de documentação (o MkDocs evolutivo criado desde a Aula 01).
+O grande entregável do curso é a criação de um **produto real em produção**, focado em resolver problemas concretos de projetos de extensão. O grupo deve apresentar a solução desenvolvida e seu respectivo portal de documentação (o MkDocs evolutivo criado desde a Aula 02).
 
 Os produtos desenvolvidos devem atender **obrigatoriamente** a um dos seguintes temas/projetos:
 
