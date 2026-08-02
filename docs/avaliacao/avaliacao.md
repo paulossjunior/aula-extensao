@@ -137,7 +137,7 @@ Não é prova escrita nem entrevista: o aluno senta na máquina e **mexe no cód
 | **CP1** | Seg, 31/08/2026 | Discovery — Aulas 01 a 04 | Justificar o segmento-alvo a partir das evidências do PRD; reescrever uma hipótese mal formulada do próprio documento; apontar quem é o pagador no mapa de atores e por quê |
 | **CP2** | Seg, 28/09/2026 | Definição e planejamento — Aulas 06 e 07 | Encaixar uma feature nova na DSM e dizer o que ela destrava; quebrar uma feature em stories; justificar a ordem de implementação escolhida |
 | **CP3** | Seg, 26/10/2026 | Especificação e contexto do agente — Aulas 09 e 10 | Adicionar um campo ponta a ponta no produto; corrigir um bug plantado pelo professor; escrever a spec de uma mudança pequena e rodar o fluxo do Spec-Kit |
-| **CP4** | Seg, 30/11/2026 | Comunicação enxuta, épicos e agentes — Aulas 12 a 14 | Escrever o cenário Gherkin de uma regra que já existe no código; derivar uma spec a partir de um épico do grupo; mostrar como o grupo detecta que o produto caiu |
+| **CP4** | Seg, 30/11/2026 | Comunicação enxuta, épicos, agentes e observabilidade — Aulas 12 a 14 | Escrever o cenário Gherkin de uma regra que já existe no código; derivar uma spec a partir de um épico do grupo; mostrar como o grupo detecta que o produto caiu e qual é o MTTD medido |
 
 Os checkpoints acontecem nas segundas de **apresentação do trabalho**, em paralelo às apresentações dos demais grupos — não consomem aula de conteúdo.
 
