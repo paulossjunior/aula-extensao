@@ -17,20 +17,11 @@ Se você é aluno ou interessado no curso, recomendamos seguir esta ordem:
 
 ## 🛠️ Ferramentas Prontas
 
-Para as atividades práticas, utilize nossos templates oficiais:
+Todo o material de apoio — templates de PRD, planejamento Scrum e DSM, exemplos preenchidos, e os guias do curso — está reunido em um lugar só:
 
-- [📚 Materiais de Apoio](materiais/index.md) — Catálogo central com templates, exemplos preenchidos e guias do curso.
-- [📄 Template de PRD](modelos/prd-template.md) — Para documentar suas descobertas de mercado.
-- [📝 Guia de Hipótese](plano-de-aula/aulas/aula-02-2026-08-10.md#como-formular-uma-hipotese) — Como estruturar suas validações.
-
-### Modelos e Exemplos
-
-- [🧩 Template de Planejamento Scrum](modelos/scrum-planejamento-template.md) — Para organizar backlog, sprints, épicos, histórias e tarefas.
-- [✅ Exemplo de Planejamento Scrum](modelos/scrum-planejamento-exemplo.md) — Exemplo preenchido com contexto de produto.
-- [🕸️ Template de DSM](modelos/dsm-template.md) — Para mapear dependências entre módulos, funcionalidades e componentes.
-- [🔀 Exemplo de DSM](modelos/dsm-exemplo.md) — Exemplo preenchido com grafo Mermaid e bifurcação de tasks.
-- [⚠️ Exemplo de DSM com Loop](modelos/dsm-exemplo-loop-erro.md) — Exemplo com dependência circular para identificar erro de planejamento.
-- [📘 Template Geral de Aula](modelos/template.md) — Modelo base para estruturar novas aulas.
+- **[📚 Materiais de Apoio](materiais/index.md)** — catálogo completo, com templates e exemplos.
+- **[📦 Especificação de Entregas](entregas/index.md)** — como entregar, o que cada exercício exige e a data de cada entrega.
+- **[✅ Critérios de Avaliação](avaliacao/avaliacao.md)** — a fórmula da nota e o que cada frente vale.
 
 ---
 

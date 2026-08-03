@@ -1,46 +1,68 @@
 # Curso de Extensão: Desenvolvimento de Projetos Suportado por IA
 
-Repositório principal de material, cronograma e estruturação do curso de extensão focado em Lean Startup, Design Centrado no Humano e Validação Rápida.
+Repositório de material, cronograma, avaliação e especificação de entregas do curso de extensão.
 
-🔗 **[Visite a Documentação Oficial](https://paulossjunior.github.io/aula-extensao/)** 
+🔗 **[Visite a documentação oficial](https://paulossjunior.github.io/aula-extensao/)**
 
-## 📖 Sobre o Curso
+## 📖 Sobre o curso
 
-O objetivo deste curso é **prover um desenvolvimento de software de produto baseado em hipótese, suportado por Inteligência Artificial.** Iremos guiar os alunos desde a identificação de um problema real até a prototipação e validação de um produto (MVP) utilizando metodologias ágeis como o *Build-Measure-Learn*. 
+O objetivo é **desenvolver projetos de software suportados por Inteligência Artificial**, do entendimento do problema até o produto rodando e sendo monitorado em produção.
 
-## 🏗 Estrutura do Repositório
+O curso percorre quatro fases: entender o problema, decidir o que construir, construir e operar. Cada grupo entrega um **produto real em produção** que resolve um problema concreto do campus, com potencial de escalar para a comunidade externa.
 
-Este site é estático e gerado automaticamente através da ferramenta acadêmica **MkDocs** com o tema **Material for MkDocs**.
+- **Período:** 29/07/2026 a 11/12/2026
+- **Segundas, 11h20–13h00:** aula de conteúdo, presencial no Lab 207
+- **Terças, 13h50–16h30:** exercícios e trabalho de grupo, a distância
+
+## 🏗 Estrutura do repositório
+
+Site estático gerado com **MkDocs** e tema **Material for MkDocs**.
 
 ```text
 aula-extensao/
-├── Makefile                # Automação de comandos locais
-├── mkdocs.yml              # Configuração global de menus e temas
+├── AGENTS.md               # instruções para agentes de IA que editam este repo
+├── Makefile                # automação local
+├── mkdocs.yml              # configuração, nav e validação de links
+├── requirements.txt        # dependências fixadas
+├── skills-lock.json        # skills instaladas via skills.sh
+├── .github/workflows/      # deploy.yml — build strict + GitHub Pages
 └── docs/
-    ├── index.md            # Landing Page do material
-    └── plano-de-aula/
-        ├── index.md        # Resumo da metodologia
-        ├── cronograma.md   # Datas e aulas do curso
-        └── aulas/          # Páginas individuais por aula
+    ├── index.md            # landing page
+    ├── assets/psm-cid/     # figuras do framework PSM CID
+    ├── plano-de-aula/
+    │   ├── index.md        # metodologia e estrutura da semana
+    │   └── aulas/          # uma página por aula
+    ├── cronograma/         # datas, feriados e apresentações
+    ├── avaliacao/          # critérios e fórmula da nota
+    ├── entregas/           # exercícios, prazos e regras de entrega
+    ├── materiais/          # catálogo de apoio
+    └── modelos/            # templates e exemplos preenchidos
 ```
 
 ## 🛠 Como executar localmente
 
-Se deseja fazer modificações ou rodar os arquivos localmente:
+```bash
+git clone https://github.com/paulossjunior/aula-extensao.git
+cd aula-extensao
+make run          # cria o .venv, instala as dependências e sobe o servidor
+```
 
-1. **Clone este repositório**
-   ```bash
-   git clone https://github.com/paulossjunior/aula-extensao.git
-   ```
+Acesse `http://localhost:8000`.
 
-2. **Execute via Makefile** (Isso criará o `.venv` e instalará o mkdocs automaticamente)
-   ```bash
-   make run
-   ```
+Outros alvos: `make install`, `make serve`, `make build`, `make clean`.
 
-3. **Acesse no navegador**  
-   Abra `http://localhost:8000`
+## ✅ Antes de abrir PR
 
-## 🚀 Deploy Automático (CI/CD)
+```bash
+.venv/bin/mkdocs build --strict
+```
 
-O deploy é gerido pelo **GitHub Actions**. Todas as atualizações feitas na branch `main` são compiladas pela Action configurada (`.github/workflows/deploy.yml`) e publicadas no GitHub Pages nativamente sem uso de branch orfã (`gh-pages`).
+É o mesmo comando do CI. A configuração valida links internos **e âncoras**: apontar para um heading que não existe derruba o build.
+
+## 🚀 Deploy
+
+Push na `main` dispara o [workflow de deploy](.github/workflows/deploy.yml), que roda o build estrito e publica no GitHub Pages nativamente, sem branch órfã.
+
+## 🤖 Editando com agente de IA
+
+Leia o [`AGENTS.md`](AGENTS.md) primeiro. Ele documenta a stack, as convenções de página de aula, o que **não** está habilitado no Markdown e as regras de consistência entre cronograma, avaliação e entregas.
