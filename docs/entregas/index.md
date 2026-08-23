@@ -71,6 +71,10 @@ Sempre que a entrega **contiver código**, ela precisa das três peças abaixo. 
 | [02](../plano-de-aula/aulas/aula-02-2026-08-10.md) | Seg, 10/08 | `aula-02-problema-e-mercado` | **Seg, 17/08** |
 | [03](../plano-de-aula/aulas/aula-03-2026-08-17.md) | Seg, 17/08 | `aula-03-prototipacao` | **Seg, 24/08** |
 | [04](../plano-de-aula/aulas/aula-04-2026-08-24.md) | Seg, 24/08 | `aula-04-clientes` | **Seg, 31/08** |
+| [Trabalho 🎮](../trabalho/recreio-arcade.md) | Seg, 24/08 | `trabalho-recreio-arcade` — **E1**: PRD, protótipo e stack | **Seg, 31/08** 📊 |
+| [Trabalho 🎮](../trabalho/recreio-arcade.md) | — | `trabalho-recreio-arcade` — **E2**: ciclo fechando, gestão no ar | **Seg, 28/09** 📊 |
+| [Trabalho 🎮](../trabalho/recreio-arcade.md) | — | `trabalho-recreio-arcade` — **E3**: campo no pátio e rankings | **Seg, 26/10** 📊 |
+| [Trabalho 🎮](../trabalho/recreio-arcade.md) | — | `trabalho-recreio-arcade` — **E4**: acerto das melhorias | **Seg, 30/11** 📊 |
 | [06](../plano-de-aula/aulas/aula-06-2026-09-14.md) | Seg, 14/09 | `aula-06-validacao-proposta` | **Seg, 21/09** |
 | [07](../plano-de-aula/aulas/aula-07-2026-09-21.md) | Seg, 21/09 | `aula-07-scrum-e-dsm` | **Seg, 28/09** |
 | [09](../plano-de-aula/aulas/aula-09-2026-10-05.md) | Seg, 05/10 | `aula-09-spec-driven-development` | **Seg, 19/10** ⚠️ |
@@ -81,6 +85,8 @@ Sempre que a entrega **contiver código**, ela precisa das três peças abaixo. 
 | [16](../plano-de-aula/aulas/aula-16-2026-12-07.md) | Seg, 07/12 | Aula extra — sem entrega | — |
 
 ⚠️ A entrega da Aula 09 pula duas semanas porque **12/10 é feriado**.
+
+📊 O trabalho [Recreio Arcade](../trabalho/recreio-arcade.md) não segue a regra semanal: são **quatro entregas mensais**, nas apresentações do trabalho.
 
 !!! danger "Prazo final do semestre"
     **Terça, 08/12/2026** é o último dia para entregar ou reenviar qualquer pendência. Depois dessa data nada é aceito.
@@ -121,6 +127,20 @@ Sempre que a entrega **contiver código**, ela precisa das três peças abaixo. 
 - Segmento-alvo escolhido, com justificativa
 - Perfil do early adopter
 - Seção 2 do PRD (Público-alvo) preenchida
+
+### Trabalho 🎮 — Recreio Arcade, em quatro entregas mensais
+
+**Pasta:** `trabalho-recreio-arcade` &nbsp;·&nbsp; **Formato:** turma em quatro grupos — G1 servidor e curadoria, G2 portal e rankings, G3 fliperama local, G4 jogos e SDK
+
+**E1 — vence Seg, 31/08:** PRD completo nas seis seções do [Template de PRD](../modelos/prd-template.md) com o público do pátio · protótipo **funcionando** no Figma Maker das duas aplicações, com os dois fluxos clicáveis · proposta de stack com **quatro exemplos que rodam** · uma tela de jogo em pixel art · `ARQUITETURA.md` com os contratos.
+
+**E2 — vence Seg, 28/09:** submissão, validação e curadoria funcionando · gestão **publicada em produção** com URL pública · fliperama sincronizando, executando e devolvendo placar · **um jogo** completo com banco de 20 questões · ranking de jogadores recebendo pontos · teste de queda de rede com reenvio sem duplicar.
+
+**E3 — vence Seg, 26/10:** **campo no pátio** entre 06 e 16/10, com no mínimo 10 jogadores de fora e 15 partidas · **segundo jogo**, de outro gênero · voto do jogador e **ranking de jogos** que não premia jogo pouco votado · kiosk blindado · catálogo com tema, nível e taxa de acerto · `docs/campo.md`.
+
+**E4 — vence Seg, 30/11:** **nenhum requisito novo** — as três mudanças do relatório de campo implementadas, as pendências das apresentações anteriores fechadas e a documentação final coerente com o código. Voltar ao pátio em novembro é recomendado, não obrigatório.
+
+Especificação completa em [Recreio Arcade](../trabalho/recreio-arcade.md).
 
 ### Aula 06 — Validar a proposta e preparar a reunião com o cliente
 

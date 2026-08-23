@@ -28,7 +28,7 @@ Duas entregas individuais, de 25 pontos cada: o **código próprio** do aluno e 
 Cada aluno deve **escrever o seu próprio código** para comprovar que aplicou o conteúdo do curso. A avaliação é individual: não vale apresentar o código do grupo.
 
 - **A dinâmica:** cada aluno mantém um **repositório próprio no GitHub**, na sua conta, com o código produzido ao longo do semestre.
-- **O que entra:** exercícios das sessões de terça (EaD) e qualquer implementação que demonstre um conteúdo visto em aula.
+- **O que entra:** exercícios das sessões de terça (EaD) e qualquer implementação que demonstre um conteúdo visto em aula — incluindo o trabalho [Recreio Arcade](../trabalho/recreio-arcade.md), construído pela turma em quatro grupos mas com o código no repositório de cada aluno.
 - **Como comprovar:** todo código entregue precisa de **arquitetura**, **base de conhecimento** e **comentários que expliquem decisão** — detalhes em [Especificação de Entregas](../entregas/index.md#os-tres-requisitos-de-todo-codigo-entregue).
 - **Autoria:** os *commits* devem estar sob a conta do próprio aluno. Uso de agente de IA é permitido e esperado, mas o aluno precisa saber explicar cada decisão do código que entregou.
 

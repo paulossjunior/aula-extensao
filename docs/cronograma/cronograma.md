@@ -20,6 +20,13 @@
 
     A última segunda de dezembro (28/12) fica fora do semestre; o fechamento do conteúdo acontece na **Aula 16, em 07/12**.
 
+!!! warning "Aula 04 — 24/08/2026: sem professor em sala"
+    O professor estará em **reunião** nesta segunda-feira. O horário fica reservado para o [**Recreio Arcade**](../trabalho/recreio-arcade.md), o trabalho de plataforma de games da turma: a sala se divide em **quatro grupos**, cada um dono de uma parte, e o resultado é **apresentado na aula seguinte, em 31/08/2026**.
+
+    O trabalho tem **quatro entregas mensais**, nas apresentações de **31/08** (PRD, protótipo no Figma Maker e stack provada), **28/09** (ciclo fechando, com a gestão no ar), **26/10** (fliperama no pátio, com campo entre **06 e 16/10**) e **30/11** (acerto das melhorias, sem requisito novo).
+
+    O conteúdo de [Identificação de Clientes](../plano-de-aula/aulas/aula-04-2026-08-24.md) permanece como **leitura assíncrona** e continua valendo para a seção de público-alvo do PRD.
+
 !!! warning "Datas sem atividade"
     - **Seg, 07/09/2026** — Feriado nacional: Independência do Brasil
     - **Ter, 08/09/2026** — Professor no [CBSoft/SBES 2026](https://cbsoft.sbc.org.br/2026/pt/cbsoft/) (08 a 11/09), apresentando artigo
@@ -38,9 +45,9 @@
 | EaD 02 | Ter, 11/08/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 03** | Seg, 17/08/2026 | 11h20–13h00 | Lab 207 | [Prototipação Rápida com IA e Validação de Requisitos](../plano-de-aula/aulas/aula-03-2026-08-17.md) |
 | EaD 03 | Ter, 18/08/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 04** | Seg, 24/08/2026 | 11h20–13h00 | Lab 207 | [Identificação de Clientes](../plano-de-aula/aulas/aula-04-2026-08-24.md) |
+| **Aula 04** | Seg, 24/08/2026 | 11h20–13h00 | Lab 207 | 🎮 **Sem professor em sala** — [Recreio Arcade](../trabalho/recreio-arcade.md), especificação do trabalho da turma em 4 grupos · entregas mensais: 31/08, 28/09, 26/10 e 30/11 · [Identificação de Clientes](../plano-de-aula/aulas/aula-04-2026-08-24.md) como leitura assíncrona |
 | EaD 04 | Ter, 25/08/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 05** | Seg, 31/08/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · entrega da proposta de produto no Figma Maker · 🎯 **Checkpoint Prático 1** (discovery) |
+| **Aula 05** | Seg, 31/08/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 1**: PRD, protótipo no Figma Maker e stack provada · 🎯 **Checkpoint Prático 1** (discovery) |
 | EaD 05 | Ter, 01/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | —    | Seg, 07/09/2026 | — | — | 🚫 **Feriado — sem aula** — Independência do Brasil (nacional) |
 | —    | Ter, 08/09/2026 | — | — | ✈️ **Sem atividade** — Professor no [CBSoft/SBES 2026](https://cbsoft.sbc.org.br/2026/pt/cbsoft/), apresentando artigo (08 a 11/09) |
@@ -48,7 +55,7 @@
 | EaD 06 | Ter, 15/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 07** | Seg, 21/09/2026 | 11h20–13h00 | Lab 207 | [Desenvolvimento Ágil, Arquitetura Inicial e Planejamento com DSM](../plano-de-aula/aulas/aula-07-2026-09-21.md) |
 | EaD 07 | Ter, 22/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 08** | Seg, 28/09/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎯 **Checkpoint Prático 2** (definição e planejamento) |
+| **Aula 08** | Seg, 28/09/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 2**: ciclo fechando, gestão no ar · 🎯 **Checkpoint Prático 2** (definição e planejamento) |
 | EaD 08 | Ter, 29/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 09** | Seg, 05/10/2026 | 11h20–13h00 | Lab 207 | [Desenvolvimento Orientado a Especificação (Spec-Driven Development)](../plano-de-aula/aulas/aula-09-2026-10-05.md) |
 | EaD 09 | Ter, 06/10/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
@@ -56,7 +63,7 @@
 | EaD 10 | Ter, 13/10/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 10** | Seg, 19/10/2026 | 11h20–13h00 | Lab 207 | [AGENTS.md, Spec-Kit e skills.sh: Configurando o Contexto do Agente](../plano-de-aula/aulas/aula-10-2026-10-19.md) |
 | EaD 11 | Ter, 20/10/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 11** | Seg, 26/10/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎯 **Checkpoint Prático 3** (especificação e contexto do agente) |
+| **Aula 11** | Seg, 26/10/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 3**: fliperama no pátio, com campo entre 06 e 16/10 · 🎯 **Checkpoint Prático 3** (especificação e contexto do agente) |
 | EaD 12 | Ter, 27/10/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | —    | Seg, 02/11/2026 | — | — | 🚫 **Feriado — sem aula** — Finados (nacional) |
 | EaD 13 | Ter, 03/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
@@ -66,7 +73,7 @@
 | EaD 15 | Ter, 17/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 14** | Seg, 23/11/2026 | 11h20–13h00 | Lab 207 | [Orquestração e Observabilidade: Medindo as Duas Pontas do Ciclo](../plano-de-aula/aulas/aula-14-2026-11-23.md) |
 | EaD 16 | Ter, 24/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 15** | Seg, 30/11/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎯 **Checkpoint Prático 4** (comunicação enxuta, épicos e agentes) |
+| **Aula 15** | Seg, 30/11/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 4**: acerto das melhorias, sem requisito novo · 🎯 **Checkpoint Prático 4** (comunicação enxuta, épicos e agentes) |
 | EaD 17 | Ter, 01/12/2026 | 13h50–16h30 | 💻 EaD | 🔧 **Regularização** — acerto do trabalho e dos exercícios pendentes |
 | **Aula 16** | Seg, 07/12/2026 | 11h20–13h00 | Lab 207 | 🏁 **Encerramento** · aula extra: [Hermes Agent: Agente de Código no Fluxo de Desenvolvimento](../plano-de-aula/aulas/aula-16-2026-12-07.md) — sem entrega obrigatória |
 | EaD 18 | Ter, 08/12/2026 | 13h50–16h30 | 💻 EaD | ⏰ **Último dia para entrega de tudo que ainda não foi entregue** |
