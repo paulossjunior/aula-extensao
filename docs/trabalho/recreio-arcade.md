@@ -279,6 +279,8 @@ Só versão `aprovada` aparece no catálogo e é baixável. Aprovar a versão 1.
 | `POST` | `/api/placares` | **token da estação** | Placar + voto; `201` se novo, `200` se `id_partida` já conhecido — nunca duplica |
 | `GET` | `/api/ranking/jogadores?jogo=` | pública | Posição, apelido, pontos, jogo |
 | `GET` | `/api/ranking/jogos` | pública | Posição, jogo, nota, **contagem de votos**, partidas, jogadores distintos |
+| `POST` | `/api/estacoes` | curador | Cadastra um fliperama e devolve o **token uma única vez** — o servidor guarda só o hash |
+| `GET` | `/api/estacoes` | curador | Lista estações com nome e data da última sincronização, sem expor token |
 
 !!! warning "Erro de validação precisa dizer o que fazer"
     `422` com "pacote inválido" não ensina nada a quem submeteu. A resposta traz um código e uma frase acionável — a mesma lista que o validador de `contratos/` produz:
@@ -286,6 +288,7 @@ Só versão `aprovada` aparece no catálogo e é baixável. Aprovar a versão 1.
     | Código | Quando | Mensagem ao autor |
     |--------|--------|-------------------|
     | `SEM_INDEX` | não há `index.html` na raiz | "O `.zip` precisa ter `index.html` na raiz, e não dentro de uma pasta." |
+    | `MAIS_DE_UM_HTML` | há outro arquivo `.html` no pacote | "O jogo precisa caber em um único `index.html`; encontrei também `{arquivo}`." |
     | `SEM_MANIFESTO` | não há `game.json` | "Falta o `game.json` na raiz do pacote." |
     | `MANIFESTO_INVALIDO` | campo obrigatório ausente | "O campo `{campo}` do `game.json` está ausente ou inválido." |
     | `PACOTE_GRANDE` | acima de 20 MB | "O pacote tem {tamanho}; o limite é 20 MB." |
@@ -328,6 +331,18 @@ O voto é dado **ao fim da partida**, no próprio fliperama (RF-L07): nota de 1 
 - **Voto sem partida não conta.** O `id_partida` é o comprovante: sem ele, o servidor recusa (RF-G13).
 - **Voto é anônimo por apelido**, como o ranking — nada de dado pessoal.
 
+!!! question "Decisão pendente — ranking por pessoa ou por partida?"
+    O apelido tem **três letras e nenhuma senha**: em um pátio de escola, duas pessoas escolhendo `ABC` é questão de minutos. Isso afeta duas regras desta especificação, que hoje tratam o apelido como identidade de pessoa: "melhor partida **de cada jogador**" e "um voto por **jogador** por jogo".
+
+    Há dois caminhos, e o professor decide antes de 24/08:
+
+    | Caminho | Como fica |
+    |---------|-----------|
+    | **Por partida** (tradição arcade) | O ranking é uma lista das **melhores partidas**, e cada partida carrega um voto. Colisão de apelido deixa de ser problema, e a regra de "voto que substitui o anterior" desaparece |
+    | **Por pessoa** | O apelido passa a ser identidade, e o sistema precisa de algo que o torne único — apelido mais um PIN de quatro dígitos, por exemplo |
+
+    Até a decisão, vale o **por partida**: é o que exige menos do jogador no pátio.
+
 !!! danger "Média simples produz ranking mentiroso"
     Um jogo com **um voto 5** ficaria na frente de um jogo com **quarenta votos 4,8** — e o primeiro lugar do recreio seria decidido pelo amigo do autor. Ordenação por média crua é o erro clássico de sistema de votos.
 
@@ -346,7 +361,7 @@ Aplicação que roda na máquina do pátio — com as restrições da seção se
 | **RF-L03** | Apresentar um **painel de seleção** com os jogos disponíveis: nome, autores, controles e capa, com busca ou filtro | **G3** |
 | **RF-L04** | Identificar o jogador por **três letras escolhidas com as setas**, à moda dos fliperamas — sem digitação livre, sem senha e sem dado pessoal | **G3** |
 | **RF-L05** | **Executar o jogo** a partir do cache local, em tela cheia, com saída visível para voltar ao painel | **G3** |
-| **RF-L06** | Capturar o **placar ao fim da partida** pelo protocolo de [Contrato de Placar](#contrato-de-placar) | **G3 (+G4)** |
+| **RF-L06** | Capturar o **placar ao fim da partida** pelo protocolo de [Contrato de Mensagens](#contrato-de-mensagens-entre-fliperama-e-jogo) | **G3 (+G4)** |
 | **RF-L07** | Pedir o **voto do jogador ao fim da partida**: nota de 1 a 5 e comentário opcional, ambos puláveis com **uma tecla**, enviados junto do placar | **G3** |
 | **RF-L08** | Enviar placares e votos para a plataforma de gestão e manter **fila local de reenvio** em disco para quando a rede estiver fora — sem duplicar registro já enviado | **G3 (+G1)** |
 | **RF-L09** | Voltar ao painel sozinho depois de um tempo sem interação, pronta para o próximo jogador — o pátio não tem operador | **G3** |
@@ -360,7 +375,7 @@ Aplicação que roda na máquina do pátio — com as restrições da seção se
 | **RF-L17** | Manter **em disco, em JSON**, o histórico de partidas daquela máquina — inclusive as ainda não enviadas — e a cópia do ranking oficial da última sincronização, calculando o ranking local a partir deles | **G3** |
 | **RF-L18** | Exibir ranking **mesmo sem rede**, deixando claro na tela se é o **oficial** (com a data da última sincronização) ou o **desta máquina** | **G3** |
 | **RF-L19** | **Subir sozinho no boot** da máquina, já na tela de atração: ligar na tomada tem de ser suficiente para o fliperama funcionar | **G3** |
-| **RF-L20** | Ler de um **arquivo de configuração** a URL do portal, o token da estação e o intervalo de sincronização — nada disso fica escrito no código | **G3** |
+| **RF-L20** | Ler de um **arquivo de configuração** a URL do portal, o token da estação (emitido em `POST /api/estacoes`) e o intervalo de sincronização — nada disso fica escrito no código nem chega ao browser do jogador | **G3** |
 | **RF-L21** | Oferecer uma **tela de diagnóstico**, aberta por combinação de teclas conhecida só pela turma: estado da rede, última sincronização, pendências na fila e espaço em disco | **G3** |
 | **RF-L22** | Encerrar por conta própria **jogo que não abre** em 15 segundos ou **partida que passa de 5 minutos**, voltando ao painel e registrando o motivo no log | **G3** |
 | **RF-L23** | Ter **mudo global**, ligado por uma tecla e lembrado entre partidas — o pátio pode exigir silêncio a qualquer momento | **G3** |
@@ -537,6 +552,7 @@ Aplicada por `validarPacote()` no upload, com o código e a mensagem da [tabela 
 | Checagem | Como testar | Reprova quando |
 |----------|-------------|----------------|
 | **Abre** | Abrir o preview e esperar 10 s | Tela branca, erro no console, jogo que não inicia |
+| **Uma página só** | Procurar `.html` no pacote e jogar até o fim | Existe segunda página, ou o jogo navega para fora do `index.html` (RJ-01) |
 | **Emite placar** | Jogar até o fim | A partida termina e nenhum `PLACAR` chega (RJ-06) |
 | **Teclas canônicas** | Jogar só com setas, espaço, `Z`, `X` e Enter | Precisa de mouse, numpad, `Esc` ou tecla de função (RJ-15) |
 | **Duas teclas** | Andar e agir ao mesmo tempo | Exige três teclas simultâneas para jogar (RJ-16) |
@@ -581,6 +597,11 @@ Aplicada por `validarPacote()` no upload, com o código e a mensagem da [tabela 
 - **Toda reprovação carrega três coisas:** o código do motivo, a frase do que está errado e **o que fazer para passar**. "Reprovado" sem instrução não cumpre RF-G04.
 - **Reprovar não é banir.** O autor corrige e envia nova versão, que entra na fila como `submetido` (RF-G09).
 - **Ninguém decide sobre o próprio jogo.** A curadoria de um jogo é sempre exercida por alguém de outro grupo (RF-G15).
+
+!!! question "Decisão pendente — RF-G15 depende de autenticação"
+    "Ninguém decide sobre o próprio jogo" só é **verificável pelo software** se ele souber quem submeteu e quem está decidindo — e autenticação de autores e curadores está hoje no **bônus** da Entrega 2.
+
+    Duas saídas: subir uma identificação mínima para o obrigatório (quem envia e quem decide se identificam, mesmo sem senha forte), ou tratar RF-G15 como **regra de conduta**, registrada no histórico de curadoria e conferida na apresentação. O professor decide antes de 24/08.
 - **Não existe "aprovado com ressalva".** Ou o jogo entra no catálogo, ou volta com motivo — meia aprovação é o que faz jogo quebrado chegar ao pátio.
 - **Prazo de decisão:** até a próxima sessão EaD. Jogo parado na fila trava o grupo que depende dele.
 
@@ -605,6 +626,7 @@ O pacote `contratos/` é o **componente que ninguém vê e todos usam**. Ele nã
 | `LIMITES` | Constantes: 20 MB de pacote, 400 MB de aba, 20 questões, teclas canônicas | Todos |
 | `validarPacote(zip)` | Função que devolve `{ok, erros[]}` com os códigos da tabela de erros do portal | G1 e o CLI |
 | `Arcade` | O **SDK do jogo** | G4 |
+| `Runner` | O **executor do jogo**: cria o iframe com `sandbox`, manda `ARCADE_INIT`, valida a origem das mensagens e devolve o `PLACAR` | G3 no pátio e **G1 no preview de curadoria** |
 | `validar-pacote` | CLI para conferir um `.zip` antes de submeter | Qualquer autor |
 
 ### O SDK do jogo
@@ -641,6 +663,30 @@ arcade.terminarPartida({ pontos: 1840, duracao_s: 96 });
 
 !!! abstract "Por que o SDK existe"
     Sem ele, cada jogo reescreveria sorteio de questão, tratamento de teclado velho e formato de placar — e cada um erraria de um jeito diferente. Com ele, um jogo novo cumpre RJ-05, RJ-12, RJ-14, RJ-15 e RJ-16 **de graça**, e o contrato só existe em um lugar.
+
+### Um runner, dois lugares
+
+O jogo é executado em **dois** contextos: no fliperama, no pátio, e no **preview de curadoria**, dentro do portal. Se cada um escrever o seu executor, os dois se comportam diferente — e a turma aprova no portal um jogo que quebra no pátio, que é o pior erro possível neste fluxo.
+
+Por isso o `Runner` mora em `contratos/`, sob o G4, e é importado pelos dois:
+
+```ts
+import { Runner } from "@recreio/contratos";
+
+const runner = Runner.abrir(elemento, {
+  pacote: "/jogos/invasores-do-lab-207/1.0.0/",
+  jogador: "ANA",              // no preview, use "CUR"
+  mudo: true,                  // no preview, som desligado
+  melhores: topLocal,          // no preview, lista vazia
+  aoPlacar: (placar) => { ... }
+});
+runner.fechar();               // remove o iframe e devolve a memória
+```
+
+O que o `Runner` garante nos dois lugares: `sandbox="allow-scripts"` sem `allow-same-origin` e sem `allow-top-navigation`, `ARCADE_INIT` enviado na abertura, mensagem aceita só do `contentWindow` correto e do jogo correto, **detecção de navegação para fora do `index.html`** — que encerra a partida e registra o motivo, porque a sessão do SDK morre ali —, encerramento por tempo (RF-L22) e remoção do iframe ao fechar (RF-L10).
+
+!!! tip "A curadoria testa o que o pátio vai rodar"
+    Com o runner compartilhado, "funcionou no preview" passa a significar alguma coisa. Sem ele, significa apenas que funcionou no navegador do curador.
 
 ### Quem guarda o placar e o apelido
 
@@ -739,12 +785,12 @@ Não existe cabine de fliperama nem controle arcade: o Recreio Arcade é **um co
 
 | ID | Requisito do jogo | Grupo |
 |----|-------------------|-------|
-| **RJ-01** | Rodar **no browser**, em HTML5 + JavaScript, direto de `index.html` na raiz do pacote | **G4** |
+| **RJ-01** | Rodar **no browser** a partir de **um único arquivo HTML**: `index.html` na raiz do pacote, e nenhuma outra página `.html` no pacote. O jogo inteiro vive nessa página — sem navegação para outra, sem iframe interno | **G4** |
 | **RJ-02** | **Não depender de rede**: todos os assets vêm dentro do pacote, sem CDN e sem chamada externa | **G4** |
 | **RJ-03** | Caber no orçamento de recursos: pacote de **até 20 MB** e uso de memória da aba de **até 400 MB** | **G4** |
 | **RJ-04** | Manter jogabilidade fluida **na tela do pátio, a partir de 1024×768**, com vídeo integrado e sem GPU dedicada | **G4** |
 | **RJ-05** | Ser jogável por **teclado**, com os controles declarados no `game.json` | **G4** |
-| **RJ-06** | Publicar o placar da partida pelo protocolo de [Contrato de Placar](#contrato-de-placar) | **G4** |
+| **RJ-06** | Publicar o placar da partida pelo protocolo de [Contrato de Mensagens](#contrato-de-mensagens-entre-fliperama-e-jogo) | **G4** |
 | **RJ-07** | Trazer `game.json` válido na raiz do pacote | **G4** |
 | **RJ-08** | Ter **partida curta** — até três minutos — e ser entendível sem tutorial: no pátio, ninguém lê instruções | **G4** |
 | **RJ-15** | Usar somente o **conjunto canônico de teclas**: setas, espaço, `Z`, `X` e Enter. Sem numpad, sem teclas de função, sem `Esc` | **G4** |
@@ -767,25 +813,53 @@ Não existe cabine de fliperama nem controle arcade: o Recreio Arcade é **um co
   "classico_referencia": "Mega Man",
   "mecanica": "plataforma",
   "tema": "História do Brasil",
-  "nivel": "ensino médio"
+  "nivel": "ensino médio",
+  "questoes": "questoes.json"
 }
 ```
 
-### Contrato de Placar
+### Contrato de Mensagens entre Fliperama e Jogo
 
-O jogo roda isolado dentro da plataforma local e devolve o placar por mensagem, sem conhecer a API do servidor:
+São **três mensagens**, e só elas. O jogo roda isolado no iframe e nunca fala com o servidor.
+
+!!! danger "Um jogo, uma página"
+    O pacote tem **um único HTML**: `index.html` na raiz (RJ-01). Menu, fases, tela de recordes e fim de partida são estados dentro dessa mesma página — nunca `menu.html` e `jogo.html`.
+
+    Não é preciosismo, é consequência do contrato: `ARCADE_INIT` chega **uma vez**, na abertura, e a sessão do SDK — apelido, mudo, questões já sorteadas, acertos e erros — vive na memória daquela página. Navegar para outro HTML descarta tudo isso: o jogo perde o apelido, o contador de acertos zera e o `PLACAR` sai errado ou não sai. O fliperama também deixa de saber se o jogo está vivo ou travado.
+
+    Scripts, estilos, sprites e sons podem ser arquivos ao lado ou embutidos — o que não pode é uma **segunda página**.
+
+**1. `ARCADE_INIT` — fliperama → jogo, ao abrir.** É por aqui que o jogo recebe o que só o fliperama sabe:
 
 ```js
-// dentro do jogo, ao terminar a partida
+{
+  tipo: "ARCADE_INIT",
+  jogo: "invasores-do-lab-207",
+  versao: "1.0.0",
+  jogador: "ANA",                 // três letras, só para exibir
+  mudo: false,
+  melhores: [{ jogador: "BIA", pontos: 2310, pendente: false }]
+}
+```
+
+**2. `ARCADE_MUDO` — fliperama → jogo, quando o mudo global muda** (RF-L23): `{ tipo: "ARCADE_MUDO", mudo: true }`.
+
+**3. `PLACAR` — jogo → fliperama, ao terminar a partida.** Quem monta é o SDK, com o que ele contabilizou:
+
+```js
 window.parent.postMessage({
   tipo: "PLACAR",
   jogo: "invasores-do-lab-207",
+  versao: "1.0.0",
   pontos: 1840,
-  duracao_s: 96
+  duracao_s: 96,
+  acertos: 4,
+  erros: 2,
+  tema: "História do Brasil"
 }, "*");
 ```
 
-A plataforma local recebe a mensagem, acrescenta o jogador e um `id_partida` único, e envia ao servidor:
+A plataforma local recebe, confere a origem, acrescenta o jogador e um `id_partida` único, e envia ao servidor:
 
 ```json
 {
@@ -825,7 +899,7 @@ A ideia é simples e velha: se a pessoa já sabe jogar, ela não perde tempo apr
 | **RJ-09** | Ser **releitura de um clássico** reconhecível, com a mecânica declarada no `game.json` (plataforma, labirinto, tiro, encaixe, corrida) | **G4** |
 | **RJ-10** | Ter **conteúdo educativo acoplado à mecânica**: o conhecimento libera poder, caminho, item ou fase — nunca é um pop-up que interrompe | **G4** |
 | **RJ-11** | Ser **pixel art**, nas regras da seção [Pixel art no orçamento](#pixel-art-no-orcamento-de-4-gb) | **G4** |
-| **RJ-12** | Trazer `questoes.json` **fora do código**, com no mínimo **20 questões**, sorteadas sem repetir na mesma partida | **G4** |
+| **RJ-12** | Trazer o banco de questões **na raiz do pacote e fora do código** — `questoes.json` por padrão, ou o caminho declarado no campo `questoes` do manifesto —, com no mínimo **20 questões**, sorteadas sem repetir na mesma partida | **G4** |
 | **RJ-13** | Declarar **tema, nível de ensino e fonte** das questões, para o catálogo e para a escola | **G4** |
 | **RJ-14** | Dar **feedback imediato** ao erro, mostrando a resposta correta e a explicação em uma linha | **G4** |
 
@@ -860,7 +934,7 @@ Pixel art aqui não é nostalgia: é a estética que **cabe** em 20 MB de pacote
 
 | Regra | Valor |
 |-------|-------|
-| Resolução interna | 320×180 ou 256×224, escalada por **múltiplo inteiro** |
+| Resolução interna | **320×180**, escalada **3×** para 960×540, com tarja no 4:3 do pátio — ou **256×224 escalada 3×** para 768×672, que preenche melhor a tela 4:3 |
 | Renderização | `image-rendering: pixelated`, sem suavização |
 | Paleta | até **32 cores**, sem gradiente e sem anti-aliasing |
 | Sprites | múltiplos de 8 px — 16×16 ou 32×32 |
