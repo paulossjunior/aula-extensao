@@ -96,7 +96,7 @@ Vence em **segunda, 31/08/2026**, e é o que a turma apresenta nesse dia.
 | **RE-01** | **PRD do Recreio Arcade** completo, nas seis seções do [Template de PRD](../modelos/prd-template.md): problema, público-alvo, soluções existentes, concorrentes, indicadores de sucesso e oportunidade | **Turma** |
 | **RE-02** | **Protótipo funcionando** da plataforma de gestão no Figma Maker, com as seis telas de [Telas](#telas-layout-no-figma-maker) navegáveis entre si | **G2** |
 | **RE-03** | **Protótipo funcionando** do fliperama local no Figma Maker, com as sete telas navegáveis, incluindo o mapa de teclas | **G3** |
-| **RE-04** | Dois **fluxos clicáveis de ponta a ponta**: submissão → validação → aprovação → catálogo, e atração → três letras → painel → jogo → placar → voto | **G2 · G3** |
+| **RE-04** | Dois **fluxos clicáveis de ponta a ponta**: submissão → validação → aprovação → catálogo, e atração → apelido → painel → jogo → placar → voto | **G2 · G3** |
 | **RE-05** | **Proposta de stack com exemplo que roda** para cada camada — não basta nomear a ferramenta, é preciso mostrá-la funcionando | **Todos** |
 | **RE-06** | Identidade visual do fliperama: **uma tela de jogo em pixel art**, dentro das regras de RJ-11, e uma questão de exemplo com fonte | **G4** |
 | **RE-07** | `ARQUITETURA.md` com os contratos fechados em plenária — pacote, API, placar e feedback | **Turma** |
@@ -221,6 +221,7 @@ Aplicação web **hospedada e acessível pela internet** — não roda em `local
 | **RF-G13** | Registrar o **voto do jogador** em cada jogo: um voto por jogador por jogo, o último substituindo o anterior, e **recusar voto que não venha de uma partida jogada** | **G1** |
 | **RF-G14** | Calcular o ranking de jogos de modo que **jogo com poucos votos não lidere** — mínimo de votos ou média ponderada —, exibindo quantos votos cada jogo tem | **G1 · G2** |
 | **RF-G15** | **Impedir que o autor decida sobre a própria submissão**: a curadoria de um jogo é sempre de alguém de outro grupo | **G1 · G2** |
+| **RF-G16** | Permitir ao curador **anonimizar um apelido** no ranking — trocando por `ANON`, sem apagar a partida — para o caso de escapar algo ofensivo da lista de bloqueio | **G1 · G2** |
 
 !!! warning "Reprovar é requisito, não detalhe"
     A parte mais fácil de esquecer é o caminho negativo: pacote quebrado, jogo que não abre, jogo reprovado que **não pode** aparecer no catálogo. Se o catálogo público listar um jogo `submetido`, o requisito RF-G05 está furado.
@@ -249,7 +250,7 @@ Aplicação web **hospedada e acessível pela internet** — não roda em `local
 | **jogo** | `id` (slug), `nome`, `descricao`, `classico_referencia`, `mecanica`, `tema`, `nivel`, `autores[]`, `criado_em` | `id` único; vem do `game.json` |
 | **versao** | `id`, `jogo_id`, `versao` (semver), `arquivo`, `tamanho_bytes`, `estado`, `submetido_em`, `decidido_em`, `decidido_por`, `justificativa` | Uma versão `aprovada` por jogo é a **vigente** |
 | **estacao** | `id`, `nome`, `token_hash`, `ultima_sync` | Identifica o fliperama que envia partidas |
-| **partida** | `id_partida` (UUID, chave), `jogo_id`, `versao_id`, `jogador` (3 letras), `pontos`, `duracao_s`, `acertos`, `erros`, `tema`, `jogado_em`, `recebido_em`, `estacao_id` | `id_partida` repetido é **descartado**, não duplicado |
+| **partida** | `id_partida` (UUID, chave), `jogo_id`, `versao_id`, `jogador` (até 9 caracteres, `[A-Z0-9]{1,9}`), `pontos`, `duracao_s`, `acertos`, `erros`, `tema`, `jogado_em`, `recebido_em`, `estacao_id` | `id_partida` repetido é **descartado**, não duplicado |
 | **voto** | `partida_id`, `jogo_id`, `jogador`, `nota` (1–5), `comentario`, `criado_em` | Único por (`jogo_id`, `jogador`): o novo substitui o anterior |
 | **evento_curadoria** | `id`, `versao_id`, `de_estado`, `para_estado`, `quem`, `quando`, `justificativa` | Append-only: é o histórico de RF-G03 |
 
@@ -314,7 +315,7 @@ Com `m = 5`, um jogo com **um voto 5** fica em 4,08 e perde de um com **quarenta
 
 #### Fora do escopo do portal
 
-Executar jogo em produção, guardar qualquer dado pessoal além do apelido de três letras, decidir mapeamento de teclas e saber o que é o pátio.
+Executar jogo em produção, guardar qualquer dado pessoal além do apelido de até 9 caracteres, decidir mapeamento de teclas e saber o que é o pátio.
 
 ### O voto e o ranking de jogos
 
@@ -332,14 +333,14 @@ O voto é dado **ao fim da partida**, no próprio fliperama (RF-L07): nota de 1 
 - **Voto é anônimo por apelido**, como o ranking — nada de dado pessoal.
 
 !!! question "Decisão pendente — ranking por pessoa ou por partida?"
-    O apelido tem **três letras e nenhuma senha**: em um pátio de escola, duas pessoas escolhendo `ABC` é questão de minutos. Isso afeta duas regras desta especificação, que hoje tratam o apelido como identidade de pessoa: "melhor partida **de cada jogador**" e "um voto por **jogador** por jogo".
+    O apelido tem **até 9 caracteres e nenhuma senha**. Nove caracteres tornam colisão menos provável que três, mas não impossível — dois alunos escolhendo `GAMER` acontece — e nada impede alguém de digitar o apelido de outro de propósito. Isso afeta duas regras que hoje tratam o apelido como identidade de pessoa: "melhor partida **de cada jogador**" e "um voto por **jogador** por jogo".
 
     Há dois caminhos, e o professor decide antes de 24/08:
 
     | Caminho | Como fica |
     |---------|-----------|
     | **Por partida** (tradição arcade) | O ranking é uma lista das **melhores partidas**, e cada partida carrega um voto. Colisão de apelido deixa de ser problema, e a regra de "voto que substitui o anterior" desaparece |
-    | **Por pessoa** | O apelido passa a ser identidade, e o sistema precisa de algo que o torne único — apelido mais um PIN de quatro dígitos, por exemplo |
+    | **Por pessoa** | O apelido passa a ser identidade, e o sistema precisa de algo que o torne único e protegido — apelido mais um PIN de quatro dígitos, por exemplo |
 
     Até a decisão, vale o **por partida**: é o que exige menos do jogador no pátio.
 
@@ -359,7 +360,7 @@ Aplicação que roda na máquina do pátio — com as restrições da seção se
 | **RF-L01** | Sincronizar com a plataforma de gestão: baixar **todos** os pacotes aprovados e guardá-los descompactados em **cache local** no disco — com 200 GB, o catálogo inteiro cabe | **G3** |
 | **RF-L02** | Funcionar **sem internet** depois da sincronização: os jogos já baixados continuam jogáveis | **G3** |
 | **RF-L03** | Apresentar um **painel de seleção** com os jogos disponíveis: nome, autores, controles e capa, com busca ou filtro | **G3** |
-| **RF-L04** | Identificar o jogador por **três letras escolhidas com as setas**, à moda dos fliperamas — sem digitação livre, sem senha e sem dado pessoal | **G3** |
+| **RF-L04** | Identificar o jogador por um **apelido de até 9 caracteres** — `A–Z` e `0–9`, em maiúsculas, sem espaço nem acento —, digitado no teclado **ou** montado com as setas quando alguma tecla estiver morta. Enter confirma; vazio vira `ANON`. Sem senha e sem dado pessoal | **G3** |
 | **RF-L05** | **Executar o jogo** a partir do cache local, em tela cheia, com saída visível para voltar ao painel | **G3** |
 | **RF-L06** | Capturar o **placar ao fim da partida** pelo protocolo de [Contrato de Mensagens](#contrato-de-mensagens-entre-fliperama-e-jogo) | **G3 (+G4)** |
 | **RF-L07** | Pedir o **voto do jogador ao fim da partida**: nota de 1 a 5 e comentário opcional, ambos puláveis com **uma tecla**, enviados junto do placar | **G3** |
@@ -381,6 +382,7 @@ Aplicação que roda na máquina do pátio — com as restrições da seção se
 | **RF-L23** | Ter **mudo global**, ligado por uma tecla e lembrado entre partidas — o pátio pode exigir silêncio a qualquer momento | **G3** |
 | **RF-L24** | Mostrar **erro em linguagem de jogador**: nada de mensagem técnica, código de exceção ou tela em branco na frente de quem passou no pátio | **G3** |
 | **RF-L25** | **Exportar o relatório da sessão** em JSON e CSV — partidas, votos, abandonos e duração —, que é o insumo do `docs/campo.md` da Entrega 3 | **G3** |
+| **RF-L26** | **Barrar apelido ofensivo** na hora da digitação, por lista de bloqueio vinda do arquivo de configuração — o apelido vai para um ranking público, num pátio de escola | **G3** |
 
 !!! tip "A fila de reenvio é o que separa demo de produto"
     O pátio provavelmente não tem Wi-Fi confiável. Placar e voto perdidos por queda de rede são o bug mais provável desta entrega — e o mais fácil de evitar guardando local e reenviando por `id_partida`.
@@ -410,7 +412,7 @@ Aplicação que roda na máquina do pátio — com as restrições da seção se
 stateDiagram-v2
     [*] --> ATRACAO
     ATRACAO --> APELIDO: qualquer tecla
-    APELIDO --> PAINEL: três letras + Enter
+    APELIDO --> PAINEL: apelido + Enter
     PAINEL --> EM_JOGO: Enter no jogo escolhido
     EM_JOGO --> FIM: jogo emite PLACAR
     EM_JOGO --> PAINEL: jogador sai
@@ -463,7 +465,7 @@ O fliperama **guarda ranking**, e isso não conflita com o portal ser a fonte de
 
 ```json
 // uma linha de partidas.jsonl
-{"id_partida":"e3c1a0f2-...","jogo":"invasores-do-lab-207","jogador":"ANA","pontos":1840,
+{"id_partida":"e3c1a0f2-...","jogo":"invasores-do-lab-207","jogador":"ANAPAULA","pontos":1840,
  "duracao_s":96,"acertos":4,"erros":2,"tema":"História do Brasil","jogado_em":"2026-10-14T14:02:11Z",
  "voto":{"nota":4,"comentario":"faltou explicar o controle"},"enviada":false}
 ```
@@ -505,10 +507,10 @@ Só as teclas canônicas de RJ-15 chegam ao jogo; `event.repeat` é ignorado; no
 | **RNF-L04** | **Robustez**: desligar na tomada não corrompe nem perde partida | Reinício recupera a fila **sem perder nenhuma** partida gravada |
 | **RNF-L05** | **Disponibilidade**: opera sem operador durante o campo | **60 minutos** sem intervenção humana; browser que cai reabre sozinho |
 | **RNF-L06** | **Segurança**: o jogo é código de terceiro | `sandbox` sem `allow-same-origin`, origem do `postMessage` validada, token **fora** do que o browser entrega |
-| **RNF-L07** | **Usabilidade de pátio**: alguém de pé, sem mouse, sem instrução | Legível a **2 m**, tudo em setas e Enter, nenhuma digitação além das 3 letras |
+| **RNF-L07** | **Usabilidade de pátio**: alguém de pé, sem mouse, sem instrução | Legível a **2 m**, tudo em setas e Enter, e a única digitação da sessão é o apelido |
 | **RNF-L08** | **Observabilidade**: dá para reconstruir a sessão depois | Log `jsonl` com início, fim, abandono, sincronização e falha de envio |
 | **RNF-L09** | **Instalação**: sobe em máquina Linux limpa | **Um comando documentado**, sem depender da máquina de quem escreveu |
-| **RNF-L10** | **Privacidade**: nada além das três letras | Log e arquivos **sem** nome, matrícula, IP ou qualquer identificador |
+| **RNF-L10** | **Privacidade**: nada além do apelido | Log e arquivos **sem** nome completo, matrícula, IP ou qualquer identificador — e o apelido é pedido como apelido, nunca como "seu nome" |
 
 #### Critérios de aceitação
 
@@ -531,7 +533,7 @@ Como se testa cada bloco. Se não passa aqui, não está pronto:
 
 #### Fora do escopo do fliperama
 
-Decidir aprovação, **ser a autoridade do ranking** e guardar dado pessoal além das três letras. Guardar ranking em disco ele pode e deve (RF-L17); o que ele não pode é apresentar o número dele como se fosse o oficial (RF-L18).
+Decidir aprovação, **ser a autoridade do ranking** e guardar dado pessoal além do apelido. Guardar ranking em disco ele pode e deve (RF-L17); o que ele não pode é apresentar o número dele como se fosse o oficial (RF-L18).
 
 ---
 
@@ -675,7 +677,7 @@ import { Runner } from "@recreio/contratos";
 
 const runner = Runner.abrir(elemento, {
   pacote: "/jogos/invasores-do-lab-207/1.0.0/",
-  jogador: "ANA",              // no preview, use "CUR"
+  jogador: "ANAPAULA",              // no preview, use "CURADOR"
   mudo: true,                  // no preview, som desligado
   melhores: topLocal,          // no preview, lista vazia
   aoPlacar: (placar) => { ... }
@@ -698,7 +700,7 @@ sequenceDiagram
     participant F as Fliperama (G3)
     participant G as Jogo (G4)
     participant P as Portal (G1)
-    J->>F: escolhe 3 letras com as setas
+    J->>F: digita o apelido (até 9 caracteres)
     F->>F: guarda o apelido só na sessão
     F->>G: abre o jogo e informa apelido + top local
     J->>G: joga
@@ -718,9 +720,9 @@ sequenceDiagram
 O que o SDK oferece ao jogo, somente leitura:
 
 ```ts
-arcade.jogador            // "ANA" — três letras, para escrever na tela
+arcade.jogador            // "ANAPAULA" — até 9 caracteres, para escrever na tela
 arcade.melhoresPontuacoes({ limite: 5 })
-// [{ jogador: "BIA", pontos: 2310, pendente: false }, ...]
+// [{ jogador: "BIAZINHA", pontos: 2310, pendente: false }, ...]
 // vem do ranking em disco do fliperama — funciona sem rede
 ```
 
@@ -836,9 +838,9 @@ São **três mensagens**, e só elas. O jogo roda isolado no iframe e nunca fala
   tipo: "ARCADE_INIT",
   jogo: "invasores-do-lab-207",
   versao: "1.0.0",
-  jogador: "ANA",                 // três letras, só para exibir
+  jogador: "ANAPAULA",                 // até 9 caracteres, só para exibir
   mudo: false,
-  melhores: [{ jogador: "BIA", pontos: 2310, pendente: false }]
+  melhores: [{ jogador: "BIAZINHA", pontos: 2310, pendente: false }]
 }
 ```
 
@@ -994,7 +996,7 @@ Antes de escrever tela, desenhe tela. O layout das duas aplicações é feito no
 | Tela | O que precisa estar visível | Atende |
 |------|------------------------------|--------|
 | **Atração (idle)** | Chamada para quem passa e instrução única: aperte uma tecla | RF-L09 |
-| **Identificação** | Três letras escolhidas com as setas, à moda arcade, e aviso de que aparecem no ranking público | RF-L04 |
+| **Identificação** | Campo de apelido de até 9 caracteres, digitável no teclado ou montado com as setas, e aviso de que ele aparece no ranking público | RF-L04 |
 | **Painel de seleção** | Grade de jogos com capa, autores, tema, nível e controles, navegável por setas | RF-L03, RF-L11 |
 | **Em jogo** | Jogo em tela cheia e como sair, sem poluir a tela | RF-L05 |
 | **Fim de partida** | Pontos, posição no ranking, **voto de 1 a 5**, comentário opcional e **botão de pular** | RF-L06, RF-L07 |
@@ -1259,7 +1261,7 @@ São **15 minutos da turma**, mostrando projeto — não código pela metade:
 |-------|---------------|-------------|
 | 1. O PRD em três minutos | Problema, quem joga, quem autoriza, e os indicadores que o campo vai medir | Turma |
 | 2. Protótipo da gestão | Clicar submissão → rejeição com motivo → aprovação → catálogo | G2 |
-| 3. Protótipo do fliperama | Clicar atração → três letras → painel → jogo → placar → voto | G3 |
+| 3. Protótipo do fliperama | Clicar atração → apelido → painel → jogo → placar → voto | G3 |
 | 4. Os quatro exemplos rodando | Endpoint respondendo, tela consumindo, `postMessage` capturado, Zod rejeitando pacote inválido, sprite andando | G1, G2, G3, G4 |
 | 5. A stack e o que ficou fora | Por que essa escolha e o que foi descartado | Turma |
 | 6. O que o protótipo revelou | A tela que expôs requisito que ninguém tinha pensado | Turma |
