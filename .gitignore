@@ -11,3 +11,6 @@ site/
 # IDEs
 .idea/
 .vscode/
+
+# macOS
+.DS_Store
