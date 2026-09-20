@@ -27,15 +27,18 @@ aula-extensao/
 ├── skills-lock.json        # skills instaladas via skills.sh
 ├── .github/workflows/      # deploy.yml — build strict + GitHub Pages
 └── docs/
-    ├── index.md            # landing page
+    ├── index.md            # porta de entrada, mapeia os quatro territórios
     ├── assets/psm-cid/     # figuras do framework PSM CID
+    ├── comece-aqui/        # TUTORIAL — passo a passo guiado, faz uma vez
     ├── plano-de-aula/
     │   ├── index.md        # metodologia e estrutura da semana
     │   └── aulas/          # uma página por aula
-    ├── cronograma/         # datas, feriados e apresentações
-    ├── avaliacao/          # critérios e fórmula da nota
-    ├── entregas/           # exercícios, prazos e regras de entrega
-    ├── materiais/          # catálogo de apoio
+    ├── entregas/           # GUIA PRÁTICO — o que entregar, como e até quando
+    ├── cronograma/         # REFERÊNCIA — datas e prazos
+    ├── avaliacao/          # REFERÊNCIA — critérios e fórmula da nota
+    ├── referencia/         # REFERÊNCIA — comandos e sintaxe consultados o semestre todo
+    ├── explicacoes/        # EXPLICAÇÃO — o porquê por trás do que se ensina
+    ├── materiais/          # mapa da documentação, agrupado pelos quatro territórios
     └── modelos/            # templates e exemplos preenchidos
 ```
 

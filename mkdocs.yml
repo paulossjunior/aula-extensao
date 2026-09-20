@@ -39,37 +39,54 @@ plugins:
   - mermaid2
 nav:
   - Início: index.md
-  - Plano de Aula:
-    - Visão Geral: plano-de-aula/index.md
-    - Aulas Práticas:
-      - Aula 01 — 03/08/2026: plano-de-aula/aulas/aula-01-2026-08-03.md
-      - Aula 02 — 10/08/2026: plano-de-aula/aulas/aula-02-2026-08-10.md
-      - Aula 03 — 17/08/2026: plano-de-aula/aulas/aula-03-2026-08-17.md
-      - Aula 04 — 24/08/2026: plano-de-aula/aulas/aula-04-2026-08-24.md
-      - Aula 06 — 14/09/2026: plano-de-aula/aulas/aula-06-2026-09-14.md
-      - Aula 07 — 21/09/2026: plano-de-aula/aulas/aula-07-2026-09-21.md
-      - Aula 09 — 05/10/2026: plano-de-aula/aulas/aula-09-2026-10-05.md
-      - Aula 10 — 19/10/2026: plano-de-aula/aulas/aula-10-2026-10-19.md
-      - Aula 12 — 09/11/2026: plano-de-aula/aulas/aula-12-2026-11-09.md
-      - Aula 13 — 16/11/2026: plano-de-aula/aulas/aula-13-2026-11-16.md
-      - Aula 14 — 23/11/2026: plano-de-aula/aulas/aula-14-2026-11-23.md
-      - Aula 16 — 07/12/2026: plano-de-aula/aulas/aula-16-2026-12-07.md
+
+  - Comece Aqui:
+    - Criando o seu repositório de entregas: comece-aqui/primeiro-repositorio.md
+    - Publicando o portal do seu grupo: comece-aqui/publicar-portal-do-grupo.md
+
   - Trabalho:
     - Recreio Arcade — Especificação: trabalho/recreio-arcade.md
-  - Avaliação: avaliacao/avaliacao.md
-  - Entregas: entregas/index.md
-  - Cronograma: cronograma/cronograma.md
-  - Materiais de Apoio: materiais/index.md
-  - Modelos:
-      - Template PRD: modelos/prd-template.md
-      - Template Geral de Aula: modelos/template.md
-      - Template de Planejamento Scrum: modelos/scrum-planejamento-template.md
-      - Exemplo de Planejamento Scrum: modelos/scrum-planejamento-exemplo.md
-      - Template de DSM: modelos/dsm-template.md
-      - Exemplo de DSM: modelos/dsm-exemplo.md
-      - Exemplo de DSM com Loop: modelos/dsm-exemplo-loop-erro.md
-      - Exemplo de SDD (TODO List React + C#): modelos/sdd-exemplo-todo-react-csharp.md
-      - Exemplo TODO List usando Caveman: modelos/caveman-exemplo-todo-list.md
+
+  - Aulas:
+    - Metodologia e Estrutura da Semana: plano-de-aula/index.md
+    - Aula 01 — 03/08/2026: plano-de-aula/aulas/aula-01-2026-08-03.md
+    - Aula 02 — 10/08/2026: plano-de-aula/aulas/aula-02-2026-08-10.md
+    - Aula 03 — 17/08/2026: plano-de-aula/aulas/aula-03-2026-08-17.md
+    - Aula 04 — 24/08/2026: plano-de-aula/aulas/aula-04-2026-08-24.md
+    - Aula 06 — 14/09/2026: plano-de-aula/aulas/aula-06-2026-09-14.md
+    - Aula 07 — 21/09/2026: plano-de-aula/aulas/aula-07-2026-09-21.md
+    - EaD 07 — 22/09/2026: plano-de-aula/aulas/ead-07-2026-09-22.md
+    - Aula 09 — 05/10/2026: plano-de-aula/aulas/aula-09-2026-10-05.md
+    - Aula 10 — 19/10/2026: plano-de-aula/aulas/aula-10-2026-10-19.md
+    - Aula 12 — 09/11/2026: plano-de-aula/aulas/aula-12-2026-11-09.md
+    - Aula 13 — 16/11/2026: plano-de-aula/aulas/aula-13-2026-11-16.md
+    - Aula 14 — 23/11/2026: plano-de-aula/aulas/aula-14-2026-11-23.md
+    - Aula 16 — 07/12/2026: plano-de-aula/aulas/aula-16-2026-12-07.md
+
+  - Referência:
+    - Cronograma: cronograma/cronograma.md
+    - Critérios de Avaliação: avaliacao/avaliacao.md
+    - Especificação de Entregas: entregas/index.md
+    - Tags, SemVer e Conventional Commits: referencia/versionamento.md
+    - GitHub Actions: referencia/github-actions.md
+    - Spec-Kit e contexto do agente: referencia/spec-kit.md
+    - Caveman: referencia/caveman.md
+    - Templates:
+      - PRD: modelos/prd-template.md
+      - Planejamento Scrum: modelos/scrum-planejamento-template.md
+      - DSM: modelos/dsm-template.md
+      - Página de Aula: modelos/template.md
+
+  - Explicações:
+    - PSM CID Measurement Framework: explicacoes/psm-cid.md
+    - Exemplos Preenchidos:
+      - Planejamento Scrum: modelos/scrum-planejamento-exemplo.md
+      - DSM: modelos/dsm-exemplo.md
+      - DSM com Loop: modelos/dsm-exemplo-loop-erro.md
+      - SDD com Spec-Kit (React + C#): modelos/sdd-exemplo-todo-react-csharp.md
+      - TODO List usando Caveman: modelos/caveman-exemplo-todo-list.md
+
+  - Mapa da Documentação: materiais/index.md
 
 markdown_extensions:
   - admonition

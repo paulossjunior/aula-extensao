@@ -5,23 +5,30 @@
 
 ---
 
-## 🚀 Comece por aqui
+## 🚀 Primeira semana: faça estes dois
 
-Se você é aluno ou interessado no curso, recomendamos seguir esta ordem:
+Antes de qualquer conteúdo, monte a infraestrutura onde o seu trabalho do semestre vai morar. São dois passo a passo guiados, cerca de 50 minutos ao todo:
 
-1.  **[Visão Geral do Curso](plano-de-aula/index.md)**: Entenda a metodologia e o que vamos aprender.
-2.  **[Cronograma](cronograma/cronograma.md)**: Confira as datas, horários e locais dos nossos encontros.
-3.  **[Aulas Práticas](plano-de-aula/aulas/aula-01-2026-08-03.md)**: Acesse o conteúdo detalhado de cada dia.
+1. **[Criando o seu repositório de entregas](comece-aqui/primeiro-repositorio.md)** — o repositório individual, na sua conta, com a estrutura que o professor consegue corrigir.
+2. **[Publicando o portal do seu grupo](comece-aqui/publicar-portal-do-grupo.md)** — o portal MkDocs do produto, no ar e publicado sozinho a cada alteração.
 
 ---
 
-## 🛠️ Ferramentas Prontas
+## 📍 Onde fica cada coisa
 
-Todo o material de apoio — templates de PRD, planejamento Scrum e DSM, exemplos preenchidos, e os guias do curso — está reunido em um lugar só:
+O portal é organizado em quatro territórios. Identifique a sua pergunta:
 
-- **[📚 Materiais de Apoio](materiais/index.md)** — catálogo completo, com templates e exemplos.
-- **[📦 Especificação de Entregas](entregas/index.md)** — como entregar, o que cada exercício exige e a data de cada entrega.
-- **[✅ Critérios de Avaliação](avaliacao/avaliacao.md)** — a fórmula da nota e o que cada frente vale.
+| Sua pergunta | Vá para |
+|--------------|---------|
+| *"Nunca fiz isso — me conduza"* | [Comece Aqui](comece-aqui/primeiro-repositorio.md) |
+| *"O que a turma vai construir?"* | [Recreio Arcade — Especificação do Trabalho](trabalho/recreio-arcade.md) |
+| *"O que eu entrego, e até quando?"* | [Especificação de Entregas](entregas/index.md) |
+| *"O que tem na aula de hoje?"* | [Aulas](plano-de-aula/index.md) · [Cronograma](cronograma/cronograma.md) |
+| *"Esqueci o comando / a sintaxe"* | [Referência](referencia/versionamento.md) |
+| *"Quanto vale cada coisa na nota?"* | [Critérios de Avaliação](avaliacao/avaliacao.md) |
+| *"Quero entender por que é assim"* | [Metodologia](plano-de-aula/index.md) · [PSM CID](explicacoes/psm-cid.md) |
+
+O índice completo, com todas as páginas agrupadas por território, está no **[Mapa da Documentação](materiais/index.md)**.
 
 ---
 

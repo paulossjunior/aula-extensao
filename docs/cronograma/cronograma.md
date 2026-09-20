@@ -53,8 +53,8 @@
 | —    | Ter, 08/09/2026 | — | — | ✈️ **Sem atividade** — Professor no [CBSoft/SBES 2026](https://cbsoft.sbc.org.br/2026/pt/cbsoft/), apresentando artigo (08 a 11/09) |
 | **Aula 06** | Seg, 14/09/2026 | 11h20–13h00 | Lab 207 | [Validação da Proposta de Produto e Preparação para Reunião com o Cliente](../plano-de-aula/aulas/aula-06-2026-09-14.md) |
 | EaD 06 | Ter, 15/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 07** | Seg, 21/09/2026 | 11h20–13h00 | Lab 207 | [Desenvolvimento Ágil, Arquitetura Inicial e Planejamento com DSM](../plano-de-aula/aulas/aula-07-2026-09-21.md) |
-| EaD 07 | Ter, 22/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
+| **Aula 07** | Seg, 21/09/2026 | 11h20–13h00 | Lab 207 | [GitFlow, Versionamento Semântico e CI/CD com GitHub Actions](../plano-de-aula/aulas/aula-07-2026-09-21.md) |
+| EaD 07 | Ter, 22/09/2026 | 13h50–16h30 | 💻 EaD | 📘 **Estudo guiado:** [Desenvolvimento Ágil, Arquitetura Inicial e Planejamento com DSM](../plano-de-aula/aulas/ead-07-2026-09-22.md) + exercícios e trabalhos |
 | **Aula 08** | Seg, 28/09/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 2**: ciclo fechando, gestão no ar · 🎯 **Checkpoint Prático 2** (definição e planejamento) |
 | EaD 08 | Ter, 29/09/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 09** | Seg, 05/10/2026 | 11h20–13h00 | Lab 207 | [Desenvolvimento Orientado a Especificação (Spec-Driven Development)](../plano-de-aula/aulas/aula-09-2026-10-05.md) |

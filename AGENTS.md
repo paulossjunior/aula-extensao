@@ -45,15 +45,18 @@ aula-extensao/
 ├── .agent/skills/          # symlink para .agents/skills — shim do skills CLI, não apague
 ├── .github/workflows/      # deploy.yml
 └── docs/
-    ├── index.md            # landing page
+    ├── index.md            # porta de entrada, mapeia os quatro territórios
     ├── assets/psm-cid/     # figuras do framework PSM CID
+    ├── comece-aqui/        # TUTORIAL — passo a passo guiado, faz uma vez
     ├── plano-de-aula/
     │   ├── index.md        # metodologia e estrutura da semana
     │   └── aulas/          # uma página por aula
-    ├── cronograma/
-    ├── avaliacao/          # critérios e fórmula da nota
-    ├── entregas/           # especificação de exercícios e prazos
-    ├── materiais/          # catálogo único de apoio
+    ├── entregas/           # GUIA PRÁTICO — o que entregar, como e até quando
+    ├── cronograma/         # REFERÊNCIA — datas e prazos
+    ├── avaliacao/          # REFERÊNCIA — critérios e fórmula da nota
+    ├── referencia/         # REFERÊNCIA — comandos e sintaxe consultados o semestre todo
+    ├── explicacoes/        # EXPLICAÇÃO — o porquê por trás do que se ensina
+    ├── materiais/          # mapa da documentação, agrupado pelos quatro territórios
     └── modelos/            # templates e exemplos preenchidos
 ```
 
@@ -85,6 +88,27 @@ Fonte única da verdade: **[`docs/modelos/template.md`](docs/modelos/template.md
 
 !!! important "O objetivo da aula vive na Introdução"
     Toda aula precisa declarar, na Introdução, **o que o aluno sai sabendo fazer**. Não use seção separada de "Objetivos de Aprendizagem": as doze aulas seguem o padrão de objetivo em prosa, e a página [Entregas](docs/entregas/index.md) já nomeia o objetivo de cada aula em uma linha.
+
+### Cada conteúdo tem um território — não escreva tudo na aula
+
+A documentação segue o framework [Diátaxis](https://diataxis.fr). Antes de escrever, decida em qual dos quatro territórios o conteúdo vive:
+
+| Território | Pasta | O que é | Marca de linguagem |
+|-----------|-------|---------|--------------------|
+| **Tutorial** | `docs/comece-aqui/` | Passo a passo guiado, do zero a um resultado que funciona. Feito uma vez | "Neste tutorial você…", passos numerados |
+| **Guia prático** | `docs/entregas/` | Receita para quem já sabe o básico e tem um objetivo concreto | "Como fazer X" |
+| **Referência** | `docs/referencia/`, `docs/cronograma/`, `docs/avaliacao/` | Descrição austera: comandos, tabelas, parâmetros. Consultada, não lida | Terceira pessoa, sem imperativo |
+| **Explicação** | `docs/explicacoes/` | Por que existe, o que foi descartado, como se conecta | "Sobre X", "Por que Y" |
+
+A **página de aula é um tutorial**: ela conduz o aluno pelo conteúdo daquele dia. Ela **não** é o depósito de tudo sobre o tema.
+
+!!! danger "O erro que este repositório já cometeu"
+    A Aula 07 chegou a 642 linhas porque acumulou tabela de comandos `git`, especificação do SemVer e dois workflows YAML inteiros — **referência presa dentro de tutorial**, alcançável só por quem lembrasse a data da aula. O sintoma que denuncia isso: um índice que precisa apontar para âncora no meio de uma aula.
+
+    Ao escrever uma aula, pergunte de cada bloco: *o aluno vai voltar aqui depois da aula?* Se sim, ele é referência — crie ou amplie a página em `docs/referencia/` e deixe na aula o ensino mais um link.
+
+!!! warning "Regra única, lugar único"
+    Regra de nota vive em `docs/avaliacao/`. Mecânica de entrega vive em `docs/entregas/`. Datas vivem em `docs/cronograma/`. Nenhuma das três se repete nas outras: o `mkdocs build --strict` valida links, **não** detecta duas versões divergentes da mesma regra.
 
 ### Admonitions
 
