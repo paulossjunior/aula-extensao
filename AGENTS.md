@@ -20,7 +20,7 @@ Site do curso de extensão **Desenvolvimento de Projetos Suportado por IA**, pub
 |------|-------|
 | Gerador | [MkDocs](https://www.mkdocs.org/) `1.6.1` |
 | Tema | [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) `9.5.50` |
-| Diagramas | `mkdocs-mermaid2-plugin` `1.2.1` |
+| Diagramas | Mermaid, pelo suporte nativo do Material (lib carregada de CDN em runtime) |
 | Deploy | GitHub Actions → GitHub Pages nativo, sem branch `gh-pages` |
 
 Versões fixadas em `requirements.txt`. **Não atualize sem necessidade** — o tema quebra com facilidade entre majors.

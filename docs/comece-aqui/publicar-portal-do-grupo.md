@@ -38,7 +38,6 @@ Agora fixe as versões num arquivo, para que todo o grupo e o servidor de public
 cat > requirements.txt <<'TXT'
 mkdocs==1.6.1
 mkdocs-material==9.5.50
-mkdocs-mermaid2-plugin==1.2.1
 TXT
 
 .venv/bin/pip install -r requirements.txt
@@ -78,7 +77,6 @@ theme:
 plugins:
   - search:
       lang: pt
-  - mermaid2
 
 markdown_extensions:
   - admonition

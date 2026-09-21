@@ -36,7 +36,6 @@ theme:
 plugins:
   - search:
       lang: pt
-  - mermaid2
 nav:
   - Início: index.md
 
