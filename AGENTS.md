@@ -21,6 +21,7 @@ Site do curso de extensão **Desenvolvimento de Projetos Suportado por IA**, pub
 | Gerador | [MkDocs](https://www.mkdocs.org/) `1.6.1` |
 | Tema | [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) `9.5.50` |
 | Diagramas | Mermaid, pelo suporte nativo do Material (lib carregada de CDN em runtime) |
+| Identidade visual | Modernist — `docs/assets/css/modernist.css`, portado do `aula-mestrado` |
 | Deploy | GitHub Actions → GitHub Pages nativo, sem branch `gh-pages` |
 
 Versões fixadas em `requirements.txt`. **Não atualize sem necessidade** — o tema quebra com facilidade entre majors.
@@ -41,11 +42,13 @@ aula-extensao/
 ├── mkdocs.yml              # configuração, nav e validação
 ├── requirements.txt        # dependências fixadas
 ├── skills-lock.json        # skills instaladas via skills.sh
+├── scripts/                # conferir-consistencia.py — trava de conteúdo do CI
 ├── .agents/skills/         # conteúdo real das skills
 ├── .agent/skills/          # symlink para .agents/skills — shim do skills CLI, não apague
 ├── .github/workflows/      # deploy.yml
 └── docs/
     ├── index.md            # porta de entrada, mapeia os quatro territórios
+    ├── assets/css/         # modernist.css — porte do design system do aula-mestrado
     ├── assets/psm-cid/     # figuras do framework PSM CID
     ├── comece-aqui/        # TUTORIAL — passo a passo guiado, faz uma vez
     ├── plano-de-aula/
@@ -108,7 +111,16 @@ A **página de aula é um tutorial**: ela conduz o aluno pelo conteúdo daquele 
     Ao escrever uma aula, pergunte de cada bloco: *o aluno vai voltar aqui depois da aula?* Se sim, ele é referência — crie ou amplie a página em `docs/referencia/` e deixe na aula o ensino mais um link.
 
 !!! warning "Regra única, lugar único"
-    Regra de nota vive em `docs/avaliacao/`. Mecânica de entrega vive em `docs/entregas/`. Datas vivem em `docs/cronograma/`. Nenhuma das três se repete nas outras: o `mkdocs build --strict` valida links, **não** detecta duas versões divergentes da mesma regra.
+    Regra de nota vive em `docs/avaliacao/`. Mecânica de entrega vive em `docs/entregas/`. Datas vivem em `docs/cronograma/`. Nenhuma das três se repete nas outras.
+
+    O `scripts/conferir-consistencia.py` cobre o que sobra do `--strict`: ele confere que o calendário, o cronograma e a avaliação contam a mesma história. Ao mudar o formato de uma dessas tabelas, **ajuste o script junto** — ele falha alto se deixar de reconhecer a tabela.
+
+### Identidade visual
+
+O site usa o design system **Modernist**, portado do repositório `aula-mestrado` para as variáveis do Material em `docs/assets/css/modernist.css`. Os princípios que o arquivo faz valer: Archivo em tudo, títulos em peso 800, **raio zero em qualquer canto**, réguas de 2px entre seções, tudo alinhado à esquerda, e o vermelho `#ec3013` reservado a link, foco e ao que custa nota — nunca como decoração.
+
+!!! warning "Especificidade importa aqui"
+    O Material define cor de admonition em `.md-typeset .admonition.abstract` (0,3,0). Um seletor mais fraco no `modernist.css` não vence e a cor padrão do tema reaparece. Ao estilizar componente do tema, confira a especificidade da regra original antes.
 
 ### Admonitions
 
@@ -136,7 +148,14 @@ Use os blocos do Material para separar níveis de atenção:
 1. **Leia este arquivo antes de agir.**
 2. **Apresente um plano e aguarde aprovação explícita** antes de criar arquivos, mover conteúdo ou rodar comandos que alterem o repositório.
 3. **Atualize a `nav` do `mkdocs.yml`** ao adicionar ou renomear página.
-4. **Rode `mkdocs build --strict` antes de considerar o trabalho pronto.** A configuração valida âncoras: link para heading inexistente derruba o build, e o CI usa o mesmo comando.
+4. **Rode as duas verificações antes de considerar o trabalho pronto** — são as mesmas do CI:
+
+    ```bash
+    python3 scripts/conferir-consistencia.py   # promessas batem entre si
+    .venv/bin/mkdocs build --strict            # links e âncoras
+    ```
+
+    O `--strict` valida link e âncora. O que ele **não** vê é promessa divergente: prazo que o cronograma não tem, pasta cobrada sem enunciado, frente de nota fora da soma. Para isso existe o script.
 5. **Não crie arquivo de conteúdo fora de `docs/`.**
 6. **Consistência entre páginas é obrigação.** Mudar data, título ou numeração de aula exige varrer cronograma, avaliação, entregas, `nav` e as referências cruzadas entre aulas.
 7. **Não invente número, data nem referência.** Calcule datas contra o calendário real e verifique URLs.

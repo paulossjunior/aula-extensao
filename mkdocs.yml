@@ -11,18 +11,21 @@ validation:
 theme:
   name: material
   language: pt
+  font:
+    text: Archivo
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Mudar para modo escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Mudar para modo claro
@@ -86,6 +89,9 @@ nav:
       - TODO List usando Caveman: modelos/caveman-exemplo-todo-list.md
 
   - Mapa da Documentação: materiais/index.md
+
+extra_css:
+  - assets/css/modernist.css
 
 markdown_extensions:
   - admonition

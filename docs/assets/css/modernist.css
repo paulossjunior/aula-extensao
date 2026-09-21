@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Modernist — porte do design system do repositório aula-mestrado para o
+   tema Material for MkDocs.
+
+   Princípios que este arquivo faz valer (ver readme do sistema original):
+   plano e arquitetural, Archivo em tudo, vermelho quase-mono sobre fundo
+   claro, raio zero em qualquer canto, réguas fortes de 2px separando
+   seções, tudo alinhado à esquerda, acento usado com parcimônia.
+
+   A folha original é a fonte da verdade dos tokens; aqui eles são
+   reescritos nas variáveis que o Material consome.
+   ========================================================================== */
+
+/* O carregador de fontes do Material pede Archivo em 300/400/700. O Modernist
+   define títulos em 800, peso que nunca chegaria sem esta importação. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap');
+
+:root {
+  /* Tokens do Modernist, verbatim */
+  --mn-bg:        #f3f2f2;
+  --mn-surface:   #eae9e9;
+  --mn-text:      #201e1d;
+  --mn-accent:    #ec3013;
+  --mn-divider:   color-mix(in srgb, #201e1d 40%, transparent);
+
+  /* Rampa neutra (OKLCH, escala perceptual compartilhada) */
+  --mn-neutral-100: #f8f4f4;
+  --mn-neutral-200: #eae7e7;
+  --mn-neutral-300: #d7d3d3;
+  --mn-neutral-400: #bab6b6;
+  --mn-neutral-500: #9b9797;
+  --mn-neutral-600: #7d7979;
+  --mn-neutral-700: #605d5d;
+  --mn-neutral-800: #444141;
+  --mn-neutral-900: #2d2b2b;
+
+  /* Rampa do acento */
+  --mn-accent-100: #fff2ef;
+  --mn-accent-200: #ffe0d9;
+  --mn-accent-300: #ffc4b8;
+  --mn-accent-400: #ff9783;
+  --mn-accent-500: #ff563c;
+  --mn-accent-600: #dd2b0f;
+  --mn-accent-700: #ae1800;   /* passo para texto corrido em acento */
+  --mn-accent-800: #7c1405;
+  --mn-accent-900: #4d170e;
+
+  --mn-regua: 2px;            /* "não suavizar as réguas em fio de cabelo" */
+}
+
+/* --------------------------------------------------------------------------
+   Tema claro
+   -------------------------------------------------------------------------- */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color:            var(--mn-bg);
+  --md-default-bg-color--light:     var(--mn-neutral-200);
+  --md-default-bg-color--lighter:   var(--mn-neutral-100);
+  --md-default-fg-color:            var(--mn-text);
+  --md-default-fg-color--light:     var(--mn-neutral-700);
+  --md-default-fg-color--lighter:   var(--mn-neutral-500);
+  --md-default-fg-color--lightest:  var(--mn-neutral-300);
+
+  --md-primary-fg-color:            var(--mn-text);
+  --md-primary-fg-color--light:     var(--mn-neutral-800);
+  --md-primary-fg-color--dark:      #000000;
+  --md-primary-bg-color:            var(--mn-bg);
+  --md-primary-bg-color--light:     var(--mn-neutral-300);
+
+  --md-accent-fg-color:             var(--mn-accent);
+  --md-accent-bg-color:             var(--mn-bg);
+
+  --md-typeset-color:               var(--mn-text);
+  --md-typeset-a-color:             var(--mn-accent-700);  /* 3:1 não basta para corpo de texto */
+  --md-typeset-mark-color:          var(--mn-accent-200);
+
+  --md-code-bg-color:               var(--mn-surface);
+  --md-code-fg-color:               var(--mn-text);
+
+  --md-footer-bg-color:             var(--mn-text);
+  --md-footer-bg-color--dark:       #000000;
+}
+
+/* --------------------------------------------------------------------------
+   Tema escuro — o sistema é de fundo claro; esta é a inversão mínima,
+   com o acento subindo um passo da rampa, como o readme orienta.
+   -------------------------------------------------------------------------- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:            var(--mn-neutral-900);
+  --md-default-bg-color--light:     var(--mn-neutral-800);
+  --md-default-bg-color--lighter:   var(--mn-neutral-700);
+  --md-default-fg-color:            var(--mn-bg);
+  --md-default-fg-color--light:     var(--mn-neutral-300);
+  --md-default-fg-color--lighter:   var(--mn-neutral-500);
+  --md-default-fg-color--lightest:  var(--mn-neutral-700);
+
+  --md-primary-fg-color:            #000000;
+  --md-primary-bg-color:            var(--mn-bg);
+
+  --md-accent-fg-color:             var(--mn-accent-500);
+  --md-typeset-color:               var(--mn-bg);
+  --md-typeset-a-color:             var(--mn-accent-400);
+  --md-typeset-mark-color:          var(--mn-accent-800);
+
+  --md-code-bg-color:               var(--mn-neutral-800);
+  --md-code-fg-color:               var(--mn-bg);
+
+  --md-footer-bg-color:             #000000;
+  --mn-divider: color-mix(in srgb, #f3f2f2 40%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   Raio zero. "Não arredonde um canto em lugar nenhum."
+   -------------------------------------------------------------------------- */
+.md-typeset :is(pre, code, table, img, details, .admonition, .tabbed-block),
+.md-typeset :is(.md-button, .highlight, .highlighttable),
+.md-search__form, .md-search__output, .md-search-result__article,
+.md-nav__link, .md-tabs__link, .md-header, .md-footer,
+.md-typeset .md-typeset__table, .md-dialog, .md-top {
+  border-radius: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tipografia — Archivo, títulos em 800, sempre à esquerda
+   -------------------------------------------------------------------------- */
+.md-typeset :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+.md-typeset h1 { color: var(--md-default-fg-color); }
+
+/* Régua forte entre seções, no lugar do fio padrão do Material */
+.md-typeset h2 {
+  border-top: var(--mn-regua) solid var(--mn-divider);
+  padding-top: 1.2rem;
+  margin-top: 2.4rem;
+}
+.md-typeset h2:first-of-type { border-top: 0; padding-top: 0; }
+/* O conteúdo já separa seções com `---`; sem isto sairiam duas réguas seguidas. */
+.md-typeset hr + h2 { border-top: 0; padding-top: 0; margin-top: 1.2rem; }
+.md-typeset hr {
+  border-bottom: var(--mn-regua) solid var(--mn-divider);
+}
+
+/* --------------------------------------------------------------------------
+   Admonitions — caixa plana com barra de acento à esquerda, sem sombra
+   -------------------------------------------------------------------------- */
+.md-typeset :is(.admonition, details) {
+  border: 0;
+  border-left: 4px solid var(--md-default-fg-color--lighter);
+  box-shadow: none;
+  background: var(--md-default-bg-color--light);
+  font-size: 0.72rem;
+}
+.md-typeset :is(.admonition-title, summary) {
+  background: transparent !important;
+  font-weight: 800;
+}
+/* Paleta mono: tudo em tinta, acento reservado ao que custa nota.
+   A especificidade precisa empatar com `.md-typeset .admonition.abstract`. */
+.md-typeset .admonition[class], .md-typeset details[class] {
+  border-color: var(--md-default-fg-color--lighter);
+}
+.md-typeset .admonition.danger, .md-typeset details.danger,
+.md-typeset .admonition.warning, .md-typeset details.warning {
+  border-color: var(--mn-accent);
+}
+
+/* Ícone e seta do título seguem a mesma regra */
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before {
+  background-color: var(--md-default-fg-color--light);
+}
+.md-typeset :is(.danger, .warning) > :is(.admonition-title, summary)::before {
+  background-color: var(--mn-accent);
+}
+.md-typeset .admonition > .admonition-title::after,
+.md-typeset details > summary::after {
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .admonition[class]:focus-within,
+.md-typeset details[class]:focus-within { box-shadow: none; }
+
+/* --------------------------------------------------------------------------
+   Tabelas — cabeçalho em tinta, réguas visíveis, nada flutuando
+   -------------------------------------------------------------------------- */
+.md-typeset table:not([class]) {
+  border: 0;
+  border-top: var(--mn-regua) solid var(--mn-divider);
+  border-bottom: var(--mn-regua) solid var(--mn-divider);
+  box-shadow: none;
+}
+.md-typeset table:not([class]) th {
+  background: transparent;
+  color: var(--md-default-fg-color);
+  font-weight: 800;
+  border-bottom: var(--mn-regua) solid var(--mn-divider);
+}
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* --------------------------------------------------------------------------
+   Acento com parcimônia — ação primária, ênfase pequena, foco
+   -------------------------------------------------------------------------- */
+.md-typeset a:hover { color: var(--mn-accent); }
+.md-typeset :is(strong, b) { font-weight: 800; }
+
+:is(a, button, input, summary, .md-nav__link, .md-tabs__link):focus-visible {
+  outline: 2px solid var(--mn-accent);
+  outline-offset: 2px;
+}
+
+.md-typeset ::selection { background: var(--mn-accent-200); }
+[data-md-color-scheme="slate"] .md-typeset ::selection { background: var(--mn-accent-800); }
+
+/* Item ativo na navegação lateral: o acento marca onde você está */
+.md-nav__link--active { color: var(--mn-accent) !important; font-weight: 600; }
+
+/* Código embutido: superfície tonal, sem cápsula arredondada */
+.md-typeset code { padding: 0.1em 0.3em; }

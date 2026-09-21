@@ -1,0 +1,53 @@
+name: CI
+
+# Roda em toda mudança que ainda não é a main — pull request ou push em branch.
+# A main tem fluxo próprio, que verifica e publica (deploy.yml). O objetivo aqui
+# é pegar o erro antes do merge, não depois.
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Verificar conteúdo e build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+          cache: pip
+
+      - name: Instalar as dependências fixadas
+        run: pip install -r requirements.txt
+
+      # As promessas feitas ao aluno precisam bater entre si: prazo que existe
+      # no cronograma, pasta cobrada que tem enunciado, nota que soma 100.
+      # O --strict não enxerga isso — ele valida link, não conteúdo.
+      - name: Conferir a consistência entre calendário, cronograma e avaliação
+        run: python scripts/conferir-consistencia.py
+
+      # Mesmo comando do deploy: link interno quebrado ou âncora inexistente
+      # derruba o build, e uma página fora da nav também.
+      - name: Build estrito
+        run: mkdocs build --strict
+
+      # A folha do Modernist é o que dá identidade visual ao site. Se ela
+      # sumir do build, o site sobe com a aparência padrão do tema e ninguém
+      # percebe até alguém abrir a página.
+      - name: Conferir que o CSS do tema foi publicado
+        run: |
+          test -f site/assets/css/modernist.css \
+            || { echo "faltou site/assets/css/modernist.css"; exit 1; }
+          grep -q 'assets/css/modernist.css' site/index.html \
+            || { echo "a home não referencia o CSS do tema"; exit 1; }

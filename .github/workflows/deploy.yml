@@ -32,6 +32,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # A mesma trava do CI: a main publica para o aluno, então a verificação
+      # de consistência vale aqui também — inclusive num push direto.
+      - name: Conferir a consistência entre calendário, cronograma e avaliação
+        run: python scripts/conferir-consistencia.py
+
       - name: Build site
         run: mkdocs build --strict
 

@@ -25,9 +25,11 @@ aula-extensao/
 ├── mkdocs.yml              # configuração, nav e validação de links
 ├── requirements.txt        # dependências fixadas
 ├── skills-lock.json        # skills instaladas via skills.sh
+├── scripts/                # conferir-consistencia.py — trava de conteúdo do CI
 ├── .github/workflows/      # deploy.yml — build strict + GitHub Pages
 └── docs/
     ├── index.md            # porta de entrada, mapeia os quatro territórios
+    ├── assets/css/         # modernist.css — identidade visual
     ├── assets/psm-cid/     # figuras do framework PSM CID
     ├── comece-aqui/        # TUTORIAL — passo a passo guiado, faz uma vez
     ├── plano-de-aula/
@@ -57,10 +59,11 @@ Outros alvos: `make install`, `make serve`, `make build`, `make clean`.
 ## ✅ Antes de abrir PR
 
 ```bash
+python3 scripts/conferir-consistencia.py
 .venv/bin/mkdocs build --strict
 ```
 
-É o mesmo comando do CI. A configuração valida links internos **e âncoras**: apontar para um heading que não existe derruba o build.
+São as mesmas duas verificações do CI. A primeira confere que calendário, cronograma e avaliação contam a mesma história; a segunda valida links e âncoras. A configuração valida links internos **e âncoras**: apontar para um heading que não existe derruba o build.
 
 ## 🚀 Deploy
 
