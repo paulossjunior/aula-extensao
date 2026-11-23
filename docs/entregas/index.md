@@ -81,7 +81,7 @@ Sempre que a entrega **contiver código**, ela precisa das três peças abaixo. 
 | [10](../plano-de-aula/aulas/aula-10-2026-10-19.md) | Seg, 19/10 | `aula-10-agents-md-e-skills` | **Seg, 26/10** |
 | [12](../plano-de-aula/aulas/aula-12-2026-11-09.md) | Seg, 09/11 | `aula-12-caveman` | **Seg, 16/11** |
 | [13](../plano-de-aula/aulas/aula-13-2026-11-16.md) | Seg, 16/11 | `aula-13-epics-e-gherkin` | **Seg, 23/11** |
-| [14](../plano-de-aula/aulas/aula-14-2026-11-23.md) | Seg, 23/11 | `aula-14-langchain` — **opcional** | Seg, 07/12 |
+| [14](../plano-de-aula/aulas/aula-14-2026-11-23.md) | Seg, 23/11 | Tarefa de casa: pendências da E4 com o Multica — entra na **E4** do Recreio Arcade, sem pasta nova | **Seg, 30/11** 📊 |
 | [16](../plano-de-aula/aulas/aula-16-2026-12-07.md) | Seg, 07/12 | Aula extra — sem entrega | — |
 
 ⚠️ A entrega da Aula 09 pula duas semanas porque **12/10 é feriado**.
@@ -194,12 +194,6 @@ Especificação completa em [Recreio Arcade](../trabalho/recreio-arcade.md).
 - Arquivo de rule criado
 - Comando `/epic-to-spec` salvo
 - `spec.md`, `plan.md`, `tasks.md` gerados, com nota sobre divergências entre agente, épico e DSM
-
-### Aula 14 — Comparar CrewAI e LangChain *(opcional)*
-
-**Pasta:** `aula-14-langchain` &nbsp;·&nbsp; **Vence:** Seg, 07/12 &nbsp;·&nbsp; **Opcional**
-
-Desafio da Aula 14: refazer a crew em LangChain, com a tabela comparativa preenchida e a recomendação escrita.
 
 ---
 

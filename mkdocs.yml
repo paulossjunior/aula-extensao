@@ -65,6 +65,10 @@ nav:
     - Aula 14 — 23/11/2026: plano-de-aula/aulas/aula-14-2026-11-23.md
     - Aula 16 — 07/12/2026: plano-de-aula/aulas/aula-16-2026-12-07.md
 
+  - Curiosidades:
+    - curiosidades/index.md
+    - Orquestração e Observabilidade: curiosidades/orquestracao-e-observabilidade.md
+
   - Referência:
     - Cronograma: cronograma/cronograma.md
     - Critérios de Avaliação: avaliacao/avaliacao.md
@@ -73,6 +77,7 @@ nav:
     - GitHub Actions: referencia/github-actions.md
     - Spec-Kit e contexto do agente: referencia/spec-kit.md
     - Caveman: referencia/caveman.md
+    - Multica: referencia/multica.md
     - Templates:
       - PRD: modelos/prd-template.md
       - Planejamento Scrum: modelos/scrum-planejamento-template.md
@@ -81,6 +86,7 @@ nav:
 
   - Explicações:
     - PSM CID Measurement Framework: explicacoes/psm-cid.md
+    - Sobre o Multica: explicacoes/multica.md
     - Exemplos Preenchidos:
       - Planejamento Scrum: modelos/scrum-planejamento-exemplo.md
       - DSM: modelos/dsm-exemplo.md

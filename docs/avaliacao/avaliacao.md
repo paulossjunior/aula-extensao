@@ -7,7 +7,6 @@ A avaliação deste curso tem foco prático e está voltada para a aplicação r
 | Código próprio | 25 pontos | Individual |
 | Mini-curso no canal do aluno | 25 pontos | Individual |
 | Trabalho em grupo | 50 pontos | Coletiva |
-| Observabilidade do produto — **opcional** | +10 pontos | Coletiva |
 | **Entrevista** | **0 ou 1** — porteira dos 50 pontos do grupo | Individual |
 
 !!! danger "Aprovação: 60 pontos ou mais"
@@ -96,7 +95,7 @@ Ela existe para responder a uma pergunta simples — *o aluno sabe trabalhar sob
 | **CP1** | Seg, 31/08/2026 | Discovery — Aulas 01 a 04 | Justificar o segmento-alvo a partir das evidências do PRD; reescrever uma hipótese mal formulada; apontar quem é o pagador no mapa de atores |
 | **CP2** | Seg, 28/09/2026 | Definição e planejamento — Aulas 06 e 07 | Encaixar uma feature nova na DSM e dizer o que ela destrava; quebrar uma feature em stories; justificar a ordem de implementação |
 | **CP3** | Seg, 26/10/2026 | Especificação e contexto do agente — Aulas 09 e 10 | Adicionar um campo ponta a ponta; corrigir um bug plantado pelo professor; rodar o fluxo do Spec-Kit para uma mudança pequena |
-| **CP4** | Seg, 30/11/2026 | Comunicação enxuta, épicos e agentes — Aulas 12 a 14 | Escrever o cenário Gherkin de uma regra existente; derivar uma spec a partir de um épico; justificar por que o trabalho foi ou não dividido entre agentes |
+| **CP4** | Seg, 30/11/2026 | Comunicação enxuta e épicos — Aulas 12 e 13 | Escrever o cenário Gherkin de uma regra existente; derivar uma spec a partir de um épico; reduzir um prompt verboso sem perder informação |
 
 ### Como o resultado é apurado
 
@@ -117,57 +116,28 @@ Ela existe para responder a uma pergunta simples — *o aluno sabe trabalhar sob
 
 ---
 
-## 🎁 Pontos Extras — Observabilidade (até 10 pontos)
-
-**Opcional.** O grupo que colocar o próprio produto sob observação ganha até **10 pontos extras**.
-
-Estar em produção não é só ter feito o deploy: é o grupo **saber** que o produto está de pé. Três peças, cumulativas:
-
-| Peça | Pontos | O que é |
-|------|--------|---------|
-| **Health check** | 3 | Uma rota que responde 200 quando o sistema está sadio, tocando as dependências críticas — banco, fila, serviço externo |
-| **Log de erro estruturado** | 3 | Uma linha por evento, com nível, momento e contexto suficiente para diagnosticar sem reproduzir |
-| **Verificação externa agendada** | 4 | Algo que consulte o health check periodicamente e **avise o grupo num canal** quando falhar |
-
-A ferramenta é escolha do grupo: cron, GitHub Action agendada, serviço de *uptime* gratuito ou um agente. O que não vale é depender de alguém lembrar de olhar.
-
-!!! tip "O que comprova a entrega"
-    O grupo informa o **MTTD** medido do próprio produto — o tempo entre uma falha provocada de propósito e o alerta chegar. É o número que separa "achamos que está no ar" de "sabemos que está no ar".
-
-!!! note "Por que vale a pena mesmo sendo opcional"
-    Um dos itens dos 50 pontos é **entrega em ambiente de produção**. Se o sistema cai na sexta e o grupo descobre na apresentação de segunda, foram três dias fora do ar. A observabilidade não é só bônus: é o que protege a nota principal.
-
-    Conteúdo na [Aula 14](../plano-de-aula/aulas/aula-14-2026-11-23.md), em formato expositivo.
-
----
-
 ## 🧮 Cálculo da Nota
 
 ```text
-NF = min(100, COD + CUR + (GRP + EXT) x ENT)
+NF = COD + CUR + GRP x ENT
 
 NF  = Nota Final              (0 a 100)   — aprovado com 60 ou mais
 COD = Código próprio          (0 a 25)    — individual
 CUR = Mini-curso              (0 a 25)    — individual
 GRP = Trabalho em grupo       (0 a 50)    — cinco itens de 10; zera se o produto não for entregue
-EXT = Observabilidade         (0 a 10)    — opcional, do grupo
 ENT = Entrevista              (0 ou 1)    — individual; 1 apenas com 4 de 4 checkpoints
 ```
 
-Os pontos extras entram na soma antes da porteira e servem para **compensar perdas em outras frentes** — não ultrapassam o teto de 100.
-
 ### Exemplos
 
-| Situação | COD | CUR | GRP | EXT | ENT | Nota final | |
-|----------|-----|-----|-----|-----|-----|-----------|---|
-| Entregou tudo e passou nos quatro checkpoints | 25 | 25 | 50 | 0 | 1 | **100** | ✅ |
-| Tudo, mais observabilidade (teto aplicado) | 25 | 25 | 50 | 10 | 1 | **100** | ✅ |
-| Sem mini-curso, mas com observabilidade | 25 | 0 | 50 | 10 | 1 | **85** | ✅ |
-| Sem código próprio, resto completo | 0 | 25 | 50 | 0 | 1 | **75** | ✅ |
-| Só o trabalho de grupo, com observabilidade | 0 | 0 | 50 | 10 | 1 | **60** | ✅ |
-| **Reprovou em um checkpoint** | 25 | 25 | 50 | 10 | **0** | **50** | ❌ |
-| **Produto do grupo não foi entregue** | 25 | 25 | **0** | 0 | 1 | **50** | ❌ |
-| Sem código próprio e reprovou na entrevista | 0 | 25 | 50 | 0 | 0 | **25** | ❌ |
+| Situação | COD | CUR | GRP | ENT | Nota final | |
+|----------|-----|-----|-----|-----|-----------|---|
+| Entregou tudo e passou nos quatro checkpoints | 25 | 25 | 50 | 1 | **100** | ✅ |
+| Sem mini-curso, resto completo | 25 | 0 | 50 | 1 | **75** | ✅ |
+| Sem código próprio, resto completo | 0 | 25 | 50 | 1 | **75** | ✅ |
+| **Reprovou em um checkpoint** | 25 | 25 | 50 | **0** | **50** | ❌ |
+| **Produto do grupo não foi entregue** | 25 | 25 | **0** | 1 | **50** | ❌ |
+| Sem código próprio e reprovou na entrevista | 0 | 25 | 50 | 0 | **25** | ❌ |
 
 !!! danger "As duas quedas de 50 pontos"
     Reprovar na entrevista e não entregar o produto têm o mesmo efeito numérico — tiram os 50 pontos do grupo — mas alcances diferentes:
@@ -178,7 +148,7 @@ Os pontos extras entram na soma antes da porteira e servem para **compensar perd
     Nos dois casos, com as frentes individuais completas o aluno fica em 50 e **não atinge os 60 da aprovação**.
 
 !!! note "A nota é individual, mesmo com trabalho coletivo"
-    `GRP` e `EXT` vêm do grupo e são iguais para todos. Já `COD`, `CUR` e `ENT` são individuais — por isso dois alunos do mesmo grupo podem terminar o semestre com notas bem diferentes.
+    `GRP` vem do grupo e é igual para todos. Já `COD`, `CUR` e `ENT` são individuais — por isso dois alunos do mesmo grupo podem terminar o semestre com notas bem diferentes.
 
 ---
 

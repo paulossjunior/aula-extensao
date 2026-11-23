@@ -35,6 +35,7 @@ Páginas austeras, para abrir enquanto se trabalha. Não ensinam: descrevem.
 | [GitHub Actions](../referencia/github-actions.md) | Como se escreve o workflow, e o que cada bloco do YAML faz |
 | [Spec-Kit e contexto do agente](../referencia/spec-kit.md) | Qual slash-command usar, e o que vai no `AGENTS.md` |
 | [Caveman](../referencia/caveman.md) | Qual nível de concisão, e qual prompt para cada fase |
+| [Multica](../referencia/multica.md) | Que comando da CLI usar, que campo configurar no agente, qual o limite do runtime |
 
 ### Templates para preencher
 
@@ -50,7 +51,8 @@ Páginas austeras, para abrir enquanto se trabalha. Não ensinam: descrevem.
 Discussão e contexto. Leia quando quiser saber de onde a ideia vem, não como executá-la.
 
 - **[Metodologia do curso](../plano-de-aula/index.md)** — Lean Startup, Human-Centered Design e discovery contínuo, e por que a semana tem dois encontros com papéis distintos.
-- **[Sobre o PSM CID Measurement Framework](../explicacoes/psm-cid.md)** — como medir o processo, do backlog à operação. Volta nas Aulas 14 e 16.
+- **[Sobre o PSM CID Measurement Framework](../explicacoes/psm-cid.md)** — como medir o processo, do backlog à operação. Volta na curiosidade de orquestração e na Aula 16.
+- **[Sobre o Multica](../explicacoes/multica.md)** — agentes como colegas de equipe: workspace, agente, runtime, run, skill e squad, e a diferença para o CrewAI.
 
 ### Exemplos preenchidos
 

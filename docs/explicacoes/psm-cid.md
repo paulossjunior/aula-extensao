@@ -2,7 +2,7 @@
 
 Explicação de apoio. Descreve o framework de medição que o curso usa para responder a uma pergunta que atravessa as quatro fases do processo: **como saber se o que estamos fazendo está funcionando**.
 
-Não é conteúdo de uma aula só. Ele é apresentado na [Aula 01](../plano-de-aula/aulas/aula-01-2026-08-03.md), volta na [Aula 14](../plano-de-aula/aulas/aula-14-2026-11-23.md) para medir orquestração e observabilidade, e de novo na [Aula 16](../plano-de-aula/aulas/aula-16-2026-12-07.md) para medir a operação.
+Não é conteúdo de uma aula só. Ele é apresentado na [Aula 01](../plano-de-aula/aulas/aula-01-2026-08-03.md), volta na curiosidade [Orquestração e Observabilidade](../curiosidades/orquestracao-e-observabilidade.md) para medir orquestração e observabilidade, e de novo na [Aula 16](../plano-de-aula/aulas/aula-16-2026-12-07.md) para medir a operação.
 
 ---
 

@@ -1188,6 +1188,8 @@ Completar RE-14 a RE-19: segundo jogo, voto e ranking de jogos, kiosk blindado, 
 
 Implementar RE-20 a RE-22 — as três mudanças do relatório, as pendências das apresentações anteriores e a documentação final — e, se der, voltar ao pátio (RE-23). **Nenhum requisito novo entra aqui.**
 
+A partir de 23/11, as pendências dos jogos e das plataformas são executadas com o Multica, como descreve a [tarefa de casa da Aula 14](../plano-de-aula/aulas/aula-14-2026-11-23.md#tarefa-de-casa-passo-a-passo).
+
 **Entregável:** Entrega 4, apresentada em 30/11.
 
 ---

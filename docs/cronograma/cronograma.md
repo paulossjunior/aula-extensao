@@ -71,9 +71,9 @@
 | EaD 14 | Ter, 10/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
 | **Aula 13** | Seg, 16/11/2026 | 11h20–13h00 | Lab 207 | [Epics, User Stories e Gherkin como Fonte do Spec-Kit](../plano-de-aula/aulas/aula-13-2026-11-16.md) |
 | EaD 15 | Ter, 17/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 14** | Seg, 23/11/2026 | 11h20–13h00 | Lab 207 | [Orquestração e Observabilidade: Medindo as Duas Pontas do Ciclo](../plano-de-aula/aulas/aula-14-2026-11-23.md) |
+| **Aula 14** | Seg, 23/11/2026 | 11h20–13h00 | Lab 207 | [Exercícios e Apresentação de Trabalhos](../plano-de-aula/aulas/aula-14-2026-11-23.md) |
 | EaD 16 | Ter, 24/11/2026 | 13h50–16h30 | 💻 EaD | Exercícios e trabalhos dos alunos |
-| **Aula 15** | Seg, 30/11/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 4**: acerto das melhorias, sem requisito novo · 🎯 **Checkpoint Prático 4** (comunicação enxuta, épicos e agentes) |
+| **Aula 15** | Seg, 30/11/2026 | 11h20–13h00 | Lab 207 | 📊 **Apresentação do Trabalho** · 🎮 [Recreio Arcade](../trabalho/recreio-arcade.md) **Entrega 4**: acerto das melhorias, sem requisito novo · 🎯 **Checkpoint Prático 4** (comunicação enxuta e épicos) |
 | EaD 17 | Ter, 01/12/2026 | 13h50–16h30 | 💻 EaD | 🔧 **Regularização** — acerto do trabalho e dos exercícios pendentes |
 | **Aula 16** | Seg, 07/12/2026 | 11h20–13h00 | Lab 207 | 🏁 **Encerramento** · aula extra: [Hermes Agent: Agente de Código no Fluxo de Desenvolvimento](../plano-de-aula/aulas/aula-16-2026-12-07.md) — sem entrega obrigatória |
 | EaD 18 | Ter, 08/12/2026 | 13h50–16h30 | 💻 EaD | ⏰ **Último dia para entrega de tudo que ainda não foi entregue** |

@@ -59,6 +59,7 @@ aula-extensao/
     ├── avaliacao/          # REFERÊNCIA — critérios e fórmula da nota
     ├── referencia/         # REFERÊNCIA — comandos e sintaxe consultados o semestre todo
     ├── explicacoes/        # EXPLICAÇÃO — o porquê por trás do que se ensina
+    ├── curiosidades/       # TUTORIAL extra — fora do cronograma, sem entrega e sem nota
     ├── materiais/          # mapa da documentação, agrupado pelos quatro territórios
     └── modelos/            # templates e exemplos preenchidos
 ```
