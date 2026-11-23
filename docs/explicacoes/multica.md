@@ -115,24 +115,6 @@ O servidor **não executa comandos** nas ferramentas locais: quem executa é o d
 
 ---
 
-## Multica e CrewAI: duas respostas para a mesma pergunta
-
-Os dois resolvem "como fazer vários agentes trabalharem juntos", mas partem de lugares diferentes.
-
-| | **Multica** | **CrewAI** |
-|---|---|---|
-| O que é | Plataforma de trabalho em equipe, com interface | Framework Python |
-| Unidade de trabalho | Issue, com status e histórico | `Task`, com `description` e `expected_output` |
-| Quem executa | Ferramentas de código existentes (Claude Code, Codex…) no seu computador | Chamadas a modelos feitas pelo seu programa |
-| Onde vive a equipe | Configuração no workspace, editável pela interface ou por agente | `agents.yaml` e `tasks.yaml` versionados no repositório |
-| Coordenação | Squad com agente líder, menções em comentários | `Process` sequencial ou hierárquico |
-| Pessoa no ciclo | Membro da equipe: recebe Inbox, aprova merge | Ponto de revisão que você programa |
-| Bom para | Desenvolvimento de software com PR, revisão e entrega | Fluxo multiagente embutido em um produto |
-
-Nenhum dos dois é melhor em absoluto. A pergunta certa é: **o que o grupo quer orquestrar — o próprio processo de desenvolvimento, ou uma funcionalidade do produto?** O primeiro caso se parece com Multica; o segundo, com CrewAI. A [sugestão de refazer em CrewAI](../curiosidades/orquestracao-e-observabilidade.md#para-ir-alem-refazer-em-crewai) existe para responder isso com número.
-
----
-
 ## Fontes
 
 - [Concepts](https://multica.ai/docs/concepts) — definição oficial de cada conceito

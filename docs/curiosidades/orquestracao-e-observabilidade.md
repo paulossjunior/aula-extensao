@@ -30,7 +30,7 @@ O conteúdo cobre a **Fase 4 do ciclo** — operar e monitorar — do ponto de v
 
 ## Materiais de Apoio
 
-- [Sobre o Multica](../explicacoes/multica.md) — os conceitos, como se relacionam e o que muda em relação ao CrewAI
+- [Sobre o Multica](../explicacoes/multica.md) — os conceitos e como se relacionam
 - [Referência — Multica](../referencia/multica.md) — instalação, comandos da CLI, campos do agente, limites do runtime
 - [Complete tutorial](https://multica.ai/docs/tutorial) — o tutorial oficial que a aula segue como exemplo
 
@@ -472,57 +472,6 @@ O produto do grupo já está no ar. Falta saber quando ele deixa de estar.
 
 ---
 
-## 🏆 Para Ir Além — Refazer em CrewAI
-
-**Formato:** Leitura e experimento livre · sem entrega
-
-Uma ferramenta só se entende de verdade quando você tem outra para comparar. O Multica é uma **plataforma**: orquestra ferramentas de código que já existem, em volta de issues e PRs. O **[CrewAI](https://github.com/crewAIInc/crewAI)** é um **framework Python**: você escreve a equipe de agentes em código e YAML. A sugestão é **reconstruir no CrewAI a mesma equipe do Exercício 1** e comparar.
-
-| Item | Valor |
-|------|-------|
-| Repositório | [crewAIInc/crewAI](https://github.com/crewAIInc/crewAI) |
-| Licença | MIT |
-| Linguagem | Python (>=3.10, <3.14) |
-| Documentação | [docs.crewai.com](https://docs.crewai.com) |
-
-O ponto de partida:
-
-```bash
-uv pip install crewai
-uv pip install 'crewai[tools]'      # com as ferramentas extras
-
-crewai create crew meu-projeto
-```
-
-O comando gera `config/agents.yaml` (cada agente com `role`, `goal` e `backstory`) e `config/tasks.yaml` (cada tarefa com `description`, `expected_output` e o agente responsável). O `Process` define se as tarefas rodam em sequência ou sob um gerente — o análogo do líder da squad. A comparação conceitual está em [Sobre o Multica](../explicacoes/multica.md#multica-e-crewai-duas-respostas-para-a-mesma-pergunta).
-
-### Roteiro sugerido
-
-1. **A mesma equipe, em CrewAI** — mesmos papéis (Engineer e Reviewer, no mínimo), mesmos limites, mesma tarefa do Exercício 1
-2. **As mesmas medidas do Exercício 3**: Cycle Time, defeitos contidos, defeitos escapados, retrabalho
-3. **Um comparativo honesto** preenchendo a tabela:
-
-| Critério | Multica | CrewAI |
-|----------|---------|--------|
-| Tempo até a primeira execução funcionando | | |
-| Onde a configuração da equipe vive | | |
-| Facilidade de versionar e revisar a equipe em PR | | |
-| Controle sobre o caminho de execução | | |
-| Onde a pessoa entra no ciclo de aprovação | | |
-| Cycle Time medido | | |
-| Defeitos escapados | | |
-
-4. **Uma recomendação**, em um parágrafo: qual dos dois o grupo deveria usar **neste produto**, e por quê. Vale recomendar nenhum dos dois.
-
-!!! abstract "Por que vale a comparação"
-    O curso não ensina ferramentas — ensina a **escolher ferramentas com evidência**. Vocês fizeram isso na Aula 02 mapeando concorrentes, e na EaD 07 justificando a ordem de implementação pela DSM. Aqui é a mesma disciplina aplicada ao próprio ferramental: duas abordagens, a mesma tarefa, os mesmos números, uma decisão defensável.
-
-    Quem só conhece uma ferramenta não escolheu nada — apenas usou a primeira que apareceu.
-
-**O que fica:** Uma decisão defensável sobre qual abordagem serve ao produto do grupo — ou a conclusão de que nenhuma serve.
-
----
-
 ## Síntese
 
 Passamos de um agente que você opera para uma **equipe de agentes que trabalha no mesmo quadro que vocês**. Os conceitos que sustentam isso — o agente é configuração, o runtime é a máquina, cada acionamento é um run, e a issue guarda a história — e, mais importante, a **exigência de evidência** de que a equipe ajudou. Orquestração é decisão de arquitetura, não moda: ela se justifica quando existem frentes independentes, e se comprova em Cycle Time e defeitos escapados.
@@ -545,7 +494,6 @@ A [Aula 16](../plano-de-aula/aulas/aula-16-2026-12-07.md) aprofunda a verificaç
 - **[Multica — Daemon and runtimes](https://multica.ai/docs/daemon-runtimes):** estados do runtime, limites de concorrência e fronteira de dados.
 - **[Multica — CLI](https://multica.ai/docs/cli):** instalação e comandos da linha de comando.
 - **[multica-ai/multica](https://github.com/multica-ai/multica):** repositório do projeto.
-- **[CrewAI — repositório](https://github.com/crewAIInc/crewAI) · [documentação](https://docs.crewai.com):** o framework do desafio.
 - **[Sobre o Multica](../explicacoes/multica.md)** e **[Referência — Multica](../referencia/multica.md):** as páginas de consulta deste curso.
 - **[Aula 01 — Como Medir o Processo](../explicacoes/psm-cid.md):** o framework PSM CID, o diagrama de contexto de medição e o ponto de equilíbrio velocidade × qualidade.
 - **[EaD 07 — Planejamento com DSM](../plano-de-aula/aulas/ead-07-2026-09-22.md):** a matriz de dependências que define o que pode rodar em paralelo.

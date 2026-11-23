@@ -52,7 +52,7 @@ Discussão e contexto. Leia quando quiser saber de onde a ideia vem, não como e
 
 - **[Metodologia do curso](../plano-de-aula/index.md)** — Lean Startup, Human-Centered Design e discovery contínuo, e por que a semana tem dois encontros com papéis distintos.
 - **[Sobre o PSM CID Measurement Framework](../explicacoes/psm-cid.md)** — como medir o processo, do backlog à operação. Volta na curiosidade de orquestração e na Aula 16.
-- **[Sobre o Multica](../explicacoes/multica.md)** — agentes como colegas de equipe: workspace, agente, runtime, run, skill e squad, e a diferença para o CrewAI.
+- **[Sobre o Multica](../explicacoes/multica.md)** — agentes como colegas de equipe: workspace, agente, runtime, run, skill e squad, e como se relacionam.
 
 ### Exemplos preenchidos
 
